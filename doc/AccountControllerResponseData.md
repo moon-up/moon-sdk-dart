@@ -10,16 +10,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **double** |  | 
 **balance** | **String** |  | 
-**transactionHash** | **String** |  | [optional] 
-**signedTransaction** | **String** |  | [optional] 
-**rawTransaction** | **String** |  | [optional] 
-**data** | **String** |  | 
-**transactions** | [**BuiltList&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
-**moonScanUrl** | **String** |  | [optional] 
-**signature** | **String** |  | [optional] 
-**transaction** | [**Tx**](Tx.md) |  | [optional] 
-**userOps** | [**BuiltList&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
 **useropTransaction** | **String** |  | [optional] 
+**userOps** | [**BuiltList&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
+**transaction** | [**Tx**](Tx.md) |  | [optional] 
+**signature** | **String** |  | [optional] 
+**moonScanUrl** | **String** |  | [optional] 
+**transactions** | [**BuiltList&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
+**data** | **String** |  | 
+**rawTransaction** | **String** |  | [optional] 
+**signedTransaction** | **String** |  | [optional] 
+**transactionHash** | **String** |  | [optional] 
 **keys** | **BuiltList&lt;String&gt;** |  | [optional] 
 **address** | **String** |  | 
 **name** | **String** |  | [optional] 

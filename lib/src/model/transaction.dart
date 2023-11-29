@@ -15,47 +15,47 @@ part 'transaction.g.dart';
 /// Transaction
 ///
 /// Properties:
-/// * [transactionHash] 
-/// * [signedTransaction] 
-/// * [rawTransaction] 
-/// * [data] 
-/// * [transactions] 
-/// * [moonScanUrl] 
-/// * [signature] 
-/// * [transaction] 
-/// * [userOps] 
 /// * [useropTransaction] 
+/// * [userOps] 
+/// * [transaction] 
+/// * [signature] 
+/// * [moonScanUrl] 
+/// * [transactions] 
+/// * [data] 
+/// * [rawTransaction] 
+/// * [signedTransaction] 
+/// * [transactionHash] 
 @BuiltValue()
 abstract class Transaction implements Built<Transaction, TransactionBuilder> {
-  @BuiltValueField(wireName: r'transaction_hash')
-  String? get transactionHash;
-
-  @BuiltValueField(wireName: r'signed_transaction')
-  String? get signedTransaction;
-
-  @BuiltValueField(wireName: r'raw_transaction')
-  String? get rawTransaction;
-
-  @BuiltValueField(wireName: r'data')
-  String? get data;
-
-  @BuiltValueField(wireName: r'transactions')
-  BuiltList<TransactionData>? get transactions;
-
-  @BuiltValueField(wireName: r'moon_scan_url')
-  String? get moonScanUrl;
-
-  @BuiltValueField(wireName: r'signature')
-  String? get signature;
-
-  @BuiltValueField(wireName: r'transaction')
-  Tx? get transaction;
+  @BuiltValueField(wireName: r'userop_transaction')
+  String? get useropTransaction;
 
   @BuiltValueField(wireName: r'userOps')
   BuiltList<TransactionRequest>? get userOps;
 
-  @BuiltValueField(wireName: r'userop_transaction')
-  String? get useropTransaction;
+  @BuiltValueField(wireName: r'transaction')
+  Tx? get transaction;
+
+  @BuiltValueField(wireName: r'signature')
+  String? get signature;
+
+  @BuiltValueField(wireName: r'moon_scan_url')
+  String? get moonScanUrl;
+
+  @BuiltValueField(wireName: r'transactions')
+  BuiltList<TransactionData>? get transactions;
+
+  @BuiltValueField(wireName: r'data')
+  String? get data;
+
+  @BuiltValueField(wireName: r'raw_transaction')
+  String? get rawTransaction;
+
+  @BuiltValueField(wireName: r'signed_transaction')
+  String? get signedTransaction;
+
+  @BuiltValueField(wireName: r'transaction_hash')
+  String? get transactionHash;
 
   Transaction._();
 
@@ -80,31 +80,38 @@ class _$TransactionSerializer implements PrimitiveSerializer<Transaction> {
     Transaction object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.transactionHash != null) {
-      yield r'transaction_hash';
+    if (object.useropTransaction != null) {
+      yield r'userop_transaction';
       yield serializers.serialize(
-        object.transactionHash,
+        object.useropTransaction,
         specifiedType: const FullType(String),
       );
     }
-    if (object.signedTransaction != null) {
-      yield r'signed_transaction';
+    if (object.userOps != null) {
+      yield r'userOps';
       yield serializers.serialize(
-        object.signedTransaction,
+        object.userOps,
+        specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
+      );
+    }
+    if (object.transaction != null) {
+      yield r'transaction';
+      yield serializers.serialize(
+        object.transaction,
+        specifiedType: const FullType(Tx),
+      );
+    }
+    if (object.signature != null) {
+      yield r'signature';
+      yield serializers.serialize(
+        object.signature,
         specifiedType: const FullType(String),
       );
     }
-    if (object.rawTransaction != null) {
-      yield r'raw_transaction';
+    if (object.moonScanUrl != null) {
+      yield r'moon_scan_url';
       yield serializers.serialize(
-        object.rawTransaction,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.data != null) {
-      yield r'data';
-      yield serializers.serialize(
-        object.data,
+        object.moonScanUrl,
         specifiedType: const FullType(String),
       );
     }
@@ -115,38 +122,31 @@ class _$TransactionSerializer implements PrimitiveSerializer<Transaction> {
         specifiedType: const FullType(BuiltList, [FullType(TransactionData)]),
       );
     }
-    if (object.moonScanUrl != null) {
-      yield r'moon_scan_url';
+    if (object.data != null) {
+      yield r'data';
       yield serializers.serialize(
-        object.moonScanUrl,
+        object.data,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.rawTransaction != null) {
+      yield r'raw_transaction';
+      yield serializers.serialize(
+        object.rawTransaction,
         specifiedType: const FullType(String),
       );
     }
-    if (object.signature != null) {
-      yield r'signature';
+    if (object.signedTransaction != null) {
+      yield r'signed_transaction';
       yield serializers.serialize(
-        object.signature,
+        object.signedTransaction,
         specifiedType: const FullType(String),
       );
     }
-    if (object.transaction != null) {
-      yield r'transaction';
+    if (object.transactionHash != null) {
+      yield r'transaction_hash';
       yield serializers.serialize(
-        object.transaction,
-        specifiedType: const FullType(Tx),
-      );
-    }
-    if (object.userOps != null) {
-      yield r'userOps';
-      yield serializers.serialize(
-        object.userOps,
-        specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
-      );
-    }
-    if (object.useropTransaction != null) {
-      yield r'userop_transaction';
-      yield serializers.serialize(
-        object.useropTransaction,
+        object.transactionHash,
         specifiedType: const FullType(String),
       );
     }
@@ -173,61 +173,12 @@ class _$TransactionSerializer implements PrimitiveSerializer<Transaction> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'transaction_hash':
+        case r'userop_transaction':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.transactionHash = valueDes;
-          break;
-        case r'signed_transaction':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.signedTransaction = valueDes;
-          break;
-        case r'raw_transaction':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.rawTransaction = valueDes;
-          break;
-        case r'data':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.data = valueDes;
-          break;
-        case r'transactions':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(TransactionData)]),
-          ) as BuiltList<TransactionData>;
-          result.transactions.replace(valueDes);
-          break;
-        case r'moon_scan_url':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.moonScanUrl = valueDes;
-          break;
-        case r'signature':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.signature = valueDes;
-          break;
-        case r'transaction':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(Tx),
-          ) as Tx;
-          result.transaction.replace(valueDes);
+          result.useropTransaction = valueDes;
           break;
         case r'userOps':
           final valueDes = serializers.deserialize(
@@ -236,12 +187,62 @@ class _$TransactionSerializer implements PrimitiveSerializer<Transaction> {
           ) as BuiltList<TransactionRequest>;
           result.userOps.replace(valueDes);
           break;
-        case r'userop_transaction':
+        case r'transaction':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Tx),
+          ) as Tx;
+          result.transaction.replace(valueDes);
+          break;
+        case r'signature':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.useropTransaction = valueDes;
+          result.signature = valueDes;
+          break;
+        case r'moon_scan_url':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.moonScanUrl = valueDes;
+          break;
+        case r'transactions':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(TransactionData)]),
+          ) as BuiltList<TransactionData>;
+          result.transactions.replace(valueDes);
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.data = valueDes;
+          break;
+        case r'raw_transaction':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.rawTransaction = valueDes;
+          break;
+        case r'signed_transaction':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.signedTransaction = valueDes;
+          break;
+        case r'transaction_hash':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.transactionHash = valueDes;
           break;
         default:
           unhandled.add(key);
