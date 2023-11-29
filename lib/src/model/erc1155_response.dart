@@ -4,8 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/tx.dart';
-import 'package:openapi/src/model/transaction_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,45 +12,77 @@ part 'erc1155_response.g.dart';
 /// Erc1155Response
 ///
 /// Properties:
-/// * [moonScanUrl] 
-/// * [transactionHash] 
-/// * [signedTransaction] 
-/// * [signedMessage] 
-/// * [rawTransaction] 
-/// * [signature] 
-/// * [transaction] 
-/// * [userOps] 
-/// * [useropTransaction] 
+/// * [type] 
+/// * [chainId] 
+/// * [data] 
+/// * [gas] 
+/// * [gasPrice] 
+/// * [gasTipCap] 
+/// * [gasFeeCap] 
+/// * [value] 
+/// * [nonce] 
+/// * [from] 
+/// * [to] 
+/// * [blobGas] 
+/// * [blobGasFeeCap] 
+/// * [blobHashes] 
+/// * [v] 
+/// * [r] 
+/// * [s] 
 /// * [balanceOf] 
 /// * [balanceOfBatch] 
 @BuiltValue()
 abstract class Erc1155Response implements Built<Erc1155Response, Erc1155ResponseBuilder> {
-  @BuiltValueField(wireName: r'moon_scan_url')
-  String? get moonScanUrl;
+  @BuiltValueField(wireName: r'type')
+  double? get type;
 
-  @BuiltValueField(wireName: r'transaction_hash')
-  String get transactionHash;
+  @BuiltValueField(wireName: r'chain_id')
+  double? get chainId;
 
-  @BuiltValueField(wireName: r'signed_transaction')
-  String get signedTransaction;
+  @BuiltValueField(wireName: r'data')
+  String? get data;
 
-  @BuiltValueField(wireName: r'signed_message')
-  String? get signedMessage;
+  @BuiltValueField(wireName: r'gas')
+  String? get gas;
 
-  @BuiltValueField(wireName: r'raw_transaction')
-  String? get rawTransaction;
+  @BuiltValueField(wireName: r'gas_price')
+  String? get gasPrice;
 
-  @BuiltValueField(wireName: r'signature')
-  String? get signature;
+  @BuiltValueField(wireName: r'gas_tip_cap')
+  String? get gasTipCap;
 
-  @BuiltValueField(wireName: r'transaction')
-  BuiltMap<String, Tx>? get transaction;
+  @BuiltValueField(wireName: r'gas_fee_cap')
+  String? get gasFeeCap;
 
-  @BuiltValueField(wireName: r'userOps')
-  BuiltList<TransactionRequest>? get userOps;
+  @BuiltValueField(wireName: r'value')
+  String? get value;
 
-  @BuiltValueField(wireName: r'userop_transaction')
-  String? get useropTransaction;
+  @BuiltValueField(wireName: r'nonce')
+  double? get nonce;
+
+  @BuiltValueField(wireName: r'from')
+  String? get from;
+
+  @BuiltValueField(wireName: r'to')
+  String? get to;
+
+  @BuiltValueField(wireName: r'blob_gas')
+  String? get blobGas;
+
+  @BuiltValueField(wireName: r'blob_gas_fee_cap')
+  String? get blobGasFeeCap;
+
+  @BuiltValueField(wireName: r'blob_hashes')
+  BuiltList<String>? get blobHashes;
+
+  @BuiltValueField(wireName: r'v')
+  String? get v;
+
+  @BuiltValueField(wireName: r'r')
+  String? get r;
+
+  @BuiltValueField(wireName: r's')
+  String? get s;
 
   @BuiltValueField(wireName: r'balance_of')
   String? get balanceOf;
@@ -83,62 +113,122 @@ class _$Erc1155ResponseSerializer implements PrimitiveSerializer<Erc1155Response
     Erc1155Response object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.moonScanUrl != null) {
-      yield r'moon_scan_url';
+    if (object.type != null) {
+      yield r'type';
       yield serializers.serialize(
-        object.moonScanUrl,
+        object.type,
+        specifiedType: const FullType(double),
+      );
+    }
+    if (object.chainId != null) {
+      yield r'chain_id';
+      yield serializers.serialize(
+        object.chainId,
+        specifiedType: const FullType(double),
+      );
+    }
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
         specifiedType: const FullType(String),
       );
     }
-    yield r'transaction_hash';
-    yield serializers.serialize(
-      object.transactionHash,
-      specifiedType: const FullType(String),
-    );
-    yield r'signed_transaction';
-    yield serializers.serialize(
-      object.signedTransaction,
-      specifiedType: const FullType(String),
-    );
-    if (object.signedMessage != null) {
-      yield r'signed_message';
+    if (object.gas != null) {
+      yield r'gas';
       yield serializers.serialize(
-        object.signedMessage,
+        object.gas,
         specifiedType: const FullType(String),
       );
     }
-    if (object.rawTransaction != null) {
-      yield r'raw_transaction';
+    if (object.gasPrice != null) {
+      yield r'gas_price';
       yield serializers.serialize(
-        object.rawTransaction,
+        object.gasPrice,
         specifiedType: const FullType(String),
       );
     }
-    if (object.signature != null) {
-      yield r'signature';
+    if (object.gasTipCap != null) {
+      yield r'gas_tip_cap';
       yield serializers.serialize(
-        object.signature,
+        object.gasTipCap,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.gasFeeCap != null) {
+      yield r'gas_fee_cap';
+      yield serializers.serialize(
+        object.gasFeeCap,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.value != null) {
+      yield r'value';
+      yield serializers.serialize(
+        object.value,
         specifiedType: const FullType(String),
       );
     }
-    if (object.transaction != null) {
-      yield r'transaction';
+    if (object.nonce != null) {
+      yield r'nonce';
       yield serializers.serialize(
-        object.transaction,
-        specifiedType: const FullType(BuiltMap, [FullType(String), FullType(Tx)]),
+        object.nonce,
+        specifiedType: const FullType(double),
       );
     }
-    if (object.userOps != null) {
-      yield r'userOps';
+    if (object.from != null) {
+      yield r'from';
       yield serializers.serialize(
-        object.userOps,
-        specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
+        object.from,
+        specifiedType: const FullType(String),
       );
     }
-    if (object.useropTransaction != null) {
-      yield r'userop_transaction';
+    if (object.to != null) {
+      yield r'to';
       yield serializers.serialize(
-        object.useropTransaction,
+        object.to,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.blobGas != null) {
+      yield r'blob_gas';
+      yield serializers.serialize(
+        object.blobGas,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.blobGasFeeCap != null) {
+      yield r'blob_gas_fee_cap';
+      yield serializers.serialize(
+        object.blobGasFeeCap,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.blobHashes != null) {
+      yield r'blob_hashes';
+      yield serializers.serialize(
+        object.blobHashes,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+      );
+    }
+    if (object.v != null) {
+      yield r'v';
+      yield serializers.serialize(
+        object.v,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.r != null) {
+      yield r'r';
+      yield serializers.serialize(
+        object.r,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.s != null) {
+      yield r's';
+      yield serializers.serialize(
+        object.s,
         specifiedType: const FullType(String),
       );
     }
@@ -179,68 +269,130 @@ class _$Erc1155ResponseSerializer implements PrimitiveSerializer<Erc1155Response
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'moon_scan_url':
+        case r'type':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.type = valueDes;
+          break;
+        case r'chain_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.chainId = valueDes;
+          break;
+        case r'data':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.moonScanUrl = valueDes;
+          result.data = valueDes;
           break;
-        case r'transaction_hash':
+        case r'gas':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.transactionHash = valueDes;
+          result.gas = valueDes;
           break;
-        case r'signed_transaction':
+        case r'gas_price':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.signedTransaction = valueDes;
+          result.gasPrice = valueDes;
           break;
-        case r'signed_message':
+        case r'gas_tip_cap':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.gasTipCap = valueDes;
+          break;
+        case r'gas_fee_cap':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.gasFeeCap = valueDes;
+          break;
+        case r'value':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.signedMessage = valueDes;
+          result.value = valueDes;
           break;
-        case r'raw_transaction':
+        case r'nonce':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(double),
+          ) as double;
+          result.nonce = valueDes;
+          break;
+        case r'from':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.rawTransaction = valueDes;
+          result.from = valueDes;
           break;
-        case r'signature':
+        case r'to':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.to = valueDes;
+          break;
+        case r'blob_gas':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.blobGas = valueDes;
+          break;
+        case r'blob_gas_fee_cap':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.blobGasFeeCap = valueDes;
+          break;
+        case r'blob_hashes':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
+          result.blobHashes.replace(valueDes);
+          break;
+        case r'v':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.signature = valueDes;
+          result.v = valueDes;
           break;
-        case r'transaction':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltMap, [FullType(String), FullType(Tx)]),
-          ) as BuiltMap<String, Tx>;
-          result.transaction.replace(valueDes);
-          break;
-        case r'userOps':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
-          ) as BuiltList<TransactionRequest>;
-          result.userOps.replace(valueDes);
-          break;
-        case r'userop_transaction':
+        case r'r':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.useropTransaction = valueDes;
+          result.r = valueDes;
+          break;
+        case r's':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.s = valueDes;
           break;
         case r'balance_of':
           final valueDes = serializers.deserialize(

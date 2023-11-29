@@ -94,6 +94,7 @@ import 'package:openapi/src/model/supported_payment_types_currency_response.dart
 import 'package:openapi/src/model/supported_payment_types_message.dart';
 import 'package:openapi/src/model/token_swap_params.dart';
 import 'package:openapi/src/model/transaction.dart';
+import 'package:openapi/src/model/transaction_data.dart';
 import 'package:openapi/src/model/transaction_input.dart';
 import 'package:openapi/src/model/transaction_input_meta_data.dart';
 import 'package:openapi/src/model/transaction_input_supported_params.dart';
@@ -194,6 +195,7 @@ part 'serializers.g.dart';
   SupportedPaymentTypesMessage,
   TokenSwapParams,
   Transaction,
+  TransactionData,
   TransactionInput,
   TransactionInputMetaData,
   TransactionInputSupportedParams,

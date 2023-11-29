@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/transaction_data.dart';
 import 'package:openapi/src/model/transaction_response_tx.dart';
 import 'package:openapi/src/model/transaction.dart';
 import 'package:openapi/src/model/input_body.dart';
@@ -31,7 +32,7 @@ abstract class ConveyorFinanceControllerResponse implements Built<ConveyorFinanc
   TransactionResponse? get convey;
 
   @BuiltValueField(wireName: r'data')
-  Transaction? get data;
+  TransactionData? get data;
 
   @BuiltValueField(wireName: r'tx')
   TransactionResponseTx? get tx;
@@ -86,7 +87,7 @@ class _$ConveyorFinanceControllerResponseSerializer implements PrimitiveSerializ
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(Transaction),
+        specifiedType: const FullType(TransactionData),
       );
     }
     if (object.tx != null) {
@@ -153,8 +154,8 @@ class _$ConveyorFinanceControllerResponseSerializer implements PrimitiveSerializ
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(Transaction),
-          ) as Transaction;
+            specifiedType: const FullType(TransactionData),
+          ) as TransactionData;
           result.data.replace(valueDes);
           break;
         case r'tx':

@@ -10,19 +10,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **double** |  | 
 **balance** | **String** |  | 
-**moonScanUrl** | **String** |  | [optional] 
-**transactionHash** | **String** |  | 
-**signedTransaction** | **String** |  | 
-**signedMessage** | **String** |  | [optional] 
+**transactionHash** | **String** |  | [optional] 
+**signedTransaction** | **String** |  | [optional] 
 **rawTransaction** | **String** |  | [optional] 
+**data** | **String** |  | 
+**transactions** | [**BuiltList&lt;TransactionData&gt;**](TransactionData.md) |  | [optional] 
+**moonScanUrl** | **String** |  | [optional] 
 **signature** | **String** |  | [optional] 
-**transaction** | [**BuiltMap&lt;String, Tx&gt;**](Tx.md) |  | [optional] 
+**transaction** | [**Tx**](Tx.md) |  | [optional] 
 **userOps** | [**BuiltList&lt;TransactionRequest&gt;**](TransactionRequest.md) |  | [optional] 
 **useropTransaction** | **String** |  | [optional] 
 **keys** | **BuiltList&lt;String&gt;** |  | [optional] 
 **address** | **String** |  | 
 **name** | **String** |  | [optional] 
-**data** | **String** |  | 
 **encoding** | **String** |  | [optional] 
 **header** | **bool** |  | [optional] 
 **signtype** | **bool** |  | [optional] 
@@ -37,6 +37,21 @@ Name | Type | Description | Notes
 **variableBorrowIndex** | **String** |  | 
 **lastUpdateTimestamp** | **String** |  | 
 **usageAsCollateralEnabled** | **String** |  | 
+**type** | **double** |  | [optional] 
+**chainId** | **double** |  | [optional] 
+**gas** | **String** |  | [optional] 
+**gasPrice** | **String** |  | [optional] 
+**gasTipCap** | **String** |  | [optional] 
+**gasFeeCap** | **String** |  | [optional] 
+**value** | **String** |  | [optional] 
+**from** | **String** |  | [optional] 
+**to** | **String** |  | [optional] 
+**blobGas** | **String** |  | [optional] 
+**blobGasFeeCap** | **String** |  | [optional] 
+**blobHashes** | **BuiltList&lt;String&gt;** |  | [optional] 
+**v** | **String** |  | [optional] 
+**r** | **String** |  | [optional] 
+**s** | **String** |  | [optional] 
 **symbol** | **String** |  | [optional] 
 **decimals** | **String** |  | [optional] 
 **totalSupply** | **String** |  | [optional] 

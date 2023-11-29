@@ -113,6 +113,7 @@ export 'package:openapi/src/model/supported_payment_types_currency_response.dart
 export 'package:openapi/src/model/supported_payment_types_message.dart';
 export 'package:openapi/src/model/token_swap_params.dart';
 export 'package:openapi/src/model/transaction.dart';
+export 'package:openapi/src/model/transaction_data.dart';
 export 'package:openapi/src/model/transaction_input.dart';
 export 'package:openapi/src/model/transaction_input_meta_data.dart';
 export 'package:openapi/src/model/transaction_input_supported_params.dart';

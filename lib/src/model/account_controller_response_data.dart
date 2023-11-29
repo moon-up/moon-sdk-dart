@@ -13,6 +13,7 @@ import 'package:openapi/src/model/erc721_response.dart';
 import 'package:openapi/src/model/sign_message.dart';
 import 'package:openapi/src/model/account_response.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:openapi/src/model/transaction_data.dart';
 import 'package:openapi/src/model/broad_cast_raw_transaction_response.dart';
 import 'package:openapi/src/model/nonce_response.dart';
 import 'package:openapi/src/model/ens_reverse_resolve_response.dart';
@@ -30,11 +31,12 @@ part 'account_controller_response_data.g.dart';
 /// Properties:
 /// * [nonce] 
 /// * [balance] 
-/// * [moonScanUrl] 
 /// * [transactionHash] 
 /// * [signedTransaction] 
-/// * [signedMessage] 
 /// * [rawTransaction] 
+/// * [data] 
+/// * [transactions] 
+/// * [moonScanUrl] 
 /// * [signature] 
 /// * [transaction] 
 /// * [userOps] 
@@ -42,7 +44,6 @@ part 'account_controller_response_data.g.dart';
 /// * [keys] 
 /// * [address] 
 /// * [name] 
-/// * [data] 
 /// * [encoding] 
 /// * [header] 
 /// * [signtype] 
@@ -57,6 +58,21 @@ part 'account_controller_response_data.g.dart';
 /// * [variableBorrowIndex] 
 /// * [lastUpdateTimestamp] 
 /// * [usageAsCollateralEnabled] 
+/// * [type] 
+/// * [chainId] 
+/// * [gas] 
+/// * [gasPrice] 
+/// * [gasTipCap] 
+/// * [gasFeeCap] 
+/// * [value] 
+/// * [from] 
+/// * [to] 
+/// * [blobGas] 
+/// * [blobGasFeeCap] 
+/// * [blobHashes] 
+/// * [v] 
+/// * [r] 
+/// * [s] 
 /// * [symbol] 
 /// * [decimals] 
 /// * [totalSupply] 
