@@ -253,4 +253,3 @@ lib/src/model/tx.dart
 lib/src/model/uniswap_input.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/transaction_data_test.dart
