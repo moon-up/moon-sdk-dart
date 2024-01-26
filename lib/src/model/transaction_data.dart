@@ -4,27 +4,28 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:moonsdk/src/model/transaction_request.dart';
-import 'package:moonsdk/src/model/tx.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
+import 'package:moonsdk/src/model/transaction_request.dart';
+import 'package:moonsdk/src/model/tx.dart';
 
 part 'transaction_data.g.dart';
 
 /// TransactionData
 ///
 /// Properties:
-/// * [moonScanUrl] 
-/// * [transactionHash] 
-/// * [signedTransaction] 
-/// * [signedMessage] 
-/// * [rawTransaction] 
-/// * [signature] 
-/// * [transaction] 
-/// * [userOps] 
-/// * [useropTransaction] 
+/// * [moonScanUrl]
+/// * [transactionHash]
+/// * [signedTransaction]
+/// * [signedMessage]
+/// * [rawTransaction]
+/// * [signature]
+/// * [transaction]
+/// * [userOps]
+/// * [useropTransaction]
 @BuiltValue()
-abstract class TransactionData implements Built<TransactionData, TransactionDataBuilder> {
+abstract class TransactionData
+    implements Built<TransactionData, TransactionDataBuilder> {
   @BuiltValueField(wireName: r'moon_scan_url')
   String? get moonScanUrl;
 
@@ -54,16 +55,19 @@ abstract class TransactionData implements Built<TransactionData, TransactionData
 
   TransactionData._();
 
-  factory TransactionData([void updates(TransactionDataBuilder b)]) = _$TransactionData;
+  factory TransactionData([void updates(TransactionDataBuilder b)]) =
+      _$TransactionData;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TransactionDataBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<TransactionData> get serializer => _$TransactionDataSerializer();
+  static Serializer<TransactionData> get serializer =>
+      _$TransactionDataSerializer();
 }
 
-class _$TransactionDataSerializer implements PrimitiveSerializer<TransactionData> {
+class _$TransactionDataSerializer
+    implements PrimitiveSerializer<TransactionData> {
   @override
   final Iterable<Type> types = const [TransactionData, _$TransactionData];
 
@@ -124,7 +128,8 @@ class _$TransactionDataSerializer implements PrimitiveSerializer<TransactionData
       yield r'userOps';
       yield serializers.serialize(
         object.userOps,
-        specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
+        specifiedType:
+            const FullType(BuiltList, [FullType(TransactionRequest)]),
       );
     }
     if (object.useropTransaction != null) {
@@ -142,7 +147,9 @@ class _$TransactionDataSerializer implements PrimitiveSerializer<TransactionData
     TransactionData object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -209,7 +216,8 @@ class _$TransactionDataSerializer implements PrimitiveSerializer<TransactionData
         case r'userOps':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(TransactionRequest)]),
+            specifiedType:
+                const FullType(BuiltList, [FullType(TransactionRequest)]),
           ) as BuiltList<TransactionRequest>;
           result.userOps.replace(valueDes);
           break;
@@ -248,4 +256,3 @@ class _$TransactionDataSerializer implements PrimitiveSerializer<TransactionData
     return result.build();
   }
 }
-
