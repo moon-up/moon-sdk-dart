@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for AaveApi
 void main() {
-  final instance = Openapi().getAaveApi();
+  final instance = Moonsdk().getAaveApi();
 
   group(AaveApi, () {
     //Future<AccountControllerResponse> borrow(String authorization, String name, AaveInput aaveInput) async

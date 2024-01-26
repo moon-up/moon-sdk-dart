@@ -1,8 +1,8 @@
-# openapi.api.UniSwapApi
+# moonsdk.api.UniSwapApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 All URIs are relative to *https://vault-api.usemoon.ai*
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,7 +32,7 @@ import 'package:openapi/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Openapi().getUniSwapApi();
+final api = Moonsdk().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -85,7 +85,7 @@ import 'package:openapi/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Openapi().getUniSwapApi();
+final api = Moonsdk().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -138,7 +138,7 @@ import 'package:openapi/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Openapi().getUniSwapApi();
+final api = Moonsdk().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -191,7 +191,7 @@ import 'package:openapi/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Openapi().getUniSwapApi();
+final api = Moonsdk().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 

@@ -7,9 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/account_controller_response.dart';
-import 'package:openapi/src/model/erc721_request.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/erc721_request.dart';
 
 class Erc721Api {
 

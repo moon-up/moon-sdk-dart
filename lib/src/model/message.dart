@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/fiat_currency.dart';
+import 'package:moonsdk/src/model/fiat_currency.dart';
+import 'package:moonsdk/src/model/crypto_currency.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/crypto_currency.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

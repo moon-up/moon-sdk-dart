@@ -1,8 +1,8 @@
-# openapi.model.TronTransactionInput
+# moonsdk.model.TronTransactionInput
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties

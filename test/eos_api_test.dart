@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for EosApi
 void main() {
-  final instance = Openapi().getEosApi();
+  final instance = Moonsdk().getEosApi();
 
   group(EosApi, () {
     //Future<AccountControllerResponse> createEosAccount(String authorization, EosInput eosInput) async

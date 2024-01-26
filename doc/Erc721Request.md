@@ -1,8 +1,8 @@
-# openapi.model.Erc721Request
+# moonsdk.model.Erc721Request
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties

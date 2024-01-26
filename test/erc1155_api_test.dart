@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for ERC1155Api
 void main() {
-  final instance = Openapi().getERC1155Api();
+  final instance = Moonsdk().getERC1155Api();
 
   group(ERC1155Api, () {
     //Future<AccountControllerResponse> balanceOf(String name, String authorization, Erc1155Request erc1155Request) async

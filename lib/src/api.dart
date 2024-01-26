@@ -4,42 +4,42 @@
 
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
-import 'package:openapi/src/serializers.dart';
-import 'package:openapi/src/auth/api_key_auth.dart';
-import 'package:openapi/src/auth/basic_auth.dart';
-import 'package:openapi/src/auth/bearer_auth.dart';
-import 'package:openapi/src/auth/oauth.dart';
-import 'package:openapi/src/api/aave_api.dart';
-import 'package:openapi/src/api/accounts_api.dart';
-import 'package:openapi/src/api/bitcoin_api.dart';
-import 'package:openapi/src/api/bitcoincash_api.dart';
-import 'package:openapi/src/api/conveyor_finance_api.dart';
-import 'package:openapi/src/api/cosmos_api.dart';
-import 'package:openapi/src/api/default_api.dart';
-import 'package:openapi/src/api/doge_coin_api.dart';
-import 'package:openapi/src/api/ens_api.dart';
-import 'package:openapi/src/api/erc1155_api.dart';
-import 'package:openapi/src/api/eos_api.dart';
-import 'package:openapi/src/api/erc20_api.dart';
-import 'package:openapi/src/api/erc4337_api.dart';
-import 'package:openapi/src/api/erc721_api.dart';
-import 'package:openapi/src/api/litecoin_api.dart';
-import 'package:openapi/src/api/oneinch_api.dart';
-import 'package:openapi/src/api/onramper_api.dart';
-import 'package:openapi/src/api/payment_api.dart';
-import 'package:openapi/src/api/ripple_api.dart';
-import 'package:openapi/src/api/solana_api.dart';
-import 'package:openapi/src/api/tron_api.dart';
-import 'package:openapi/src/api/uni_swap_api.dart';
-import 'package:openapi/src/api/yearn_api.dart';
+import 'package:moonsdk/src/serializers.dart';
+import 'package:moonsdk/src/auth/api_key_auth.dart';
+import 'package:moonsdk/src/auth/basic_auth.dart';
+import 'package:moonsdk/src/auth/bearer_auth.dart';
+import 'package:moonsdk/src/auth/oauth.dart';
+import 'package:moonsdk/src/api/aave_api.dart';
+import 'package:moonsdk/src/api/accounts_api.dart';
+import 'package:moonsdk/src/api/bitcoin_api.dart';
+import 'package:moonsdk/src/api/bitcoincash_api.dart';
+import 'package:moonsdk/src/api/conveyor_finance_api.dart';
+import 'package:moonsdk/src/api/cosmos_api.dart';
+import 'package:moonsdk/src/api/default_api.dart';
+import 'package:moonsdk/src/api/doge_coin_api.dart';
+import 'package:moonsdk/src/api/ens_api.dart';
+import 'package:moonsdk/src/api/erc1155_api.dart';
+import 'package:moonsdk/src/api/eos_api.dart';
+import 'package:moonsdk/src/api/erc20_api.dart';
+import 'package:moonsdk/src/api/erc4337_api.dart';
+import 'package:moonsdk/src/api/erc721_api.dart';
+import 'package:moonsdk/src/api/litecoin_api.dart';
+import 'package:moonsdk/src/api/oneinch_api.dart';
+import 'package:moonsdk/src/api/onramper_api.dart';
+import 'package:moonsdk/src/api/payment_api.dart';
+import 'package:moonsdk/src/api/ripple_api.dart';
+import 'package:moonsdk/src/api/solana_api.dart';
+import 'package:moonsdk/src/api/tron_api.dart';
+import 'package:moonsdk/src/api/uni_swap_api.dart';
+import 'package:moonsdk/src/api/yearn_api.dart';
 
-class Openapi {
+class Moonsdk {
   static const String basePath = r'https://vault-api.usemoon.ai';
 
   final Dio dio;
   final Serializers serializers;
 
-  Openapi({
+  Moonsdk({
     Dio? dio,
     Serializers? serializers,
     String? basePathOverride,

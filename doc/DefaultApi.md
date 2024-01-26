@@ -1,8 +1,8 @@
-# openapi.api.DefaultApi
+# moonsdk.api.DefaultApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 All URIs are relative to *https://vault-api.usemoon.ai*
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = Moonsdk().getDefaultApi();
 
 try {
     final response = api.getMessage();

@@ -1,8 +1,8 @@
-# openapi.model.INFTApprovalERC721
+# moonsdk.model.INFTApprovalERC721
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties

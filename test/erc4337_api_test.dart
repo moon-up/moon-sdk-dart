@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for Erc4337Api
 void main() {
-  final instance = Openapi().getErc4337Api();
+  final instance = Moonsdk().getErc4337Api();
 
   group(Erc4337Api, () {
     //Future<AccountControllerResponse> getAddress(String authorization, String accountName, InputBody inputBody) async

@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for OneinchApi
 void main() {
-  final instance = Openapi().getOneinchApi();
+  final instance = Moonsdk().getOneinchApi();
 
   group(OneinchApi, () {
     //Future<JsonObject> approveCallData(JsonObject body) async

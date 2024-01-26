@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for DogeCoinApi
 void main() {
-  final instance = Openapi().getDogeCoinApi();
+  final instance = Moonsdk().getDogeCoinApi();
 
   group(DogeCoinApi, () {
     //Future<AccountControllerResponse> createDogeCoinAccount(String authorization, DogeCoinInput dogeCoinInput) async

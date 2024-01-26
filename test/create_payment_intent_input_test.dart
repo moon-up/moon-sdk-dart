@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 // tests for CreatePaymentIntentInput
 void main() {
@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(CreatePaymentIntentInput, () {
+    // String config
+    test('to test the property `config`', () async {
+      // TODO
+    });
+
     // BuiltMap<String, String> metadata
     test('to test the property `metadata`', () async {
       // TODO

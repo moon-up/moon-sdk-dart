@@ -1,12 +1,32 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for PaymentApi
 void main() {
-  final instance = Openapi().getPaymentApi();
+  final instance = Moonsdk().getPaymentApi();
 
   group(PaymentApi, () {
+    //Future<JsonObject> createPaymentIntentConfig(String authorization, JsonObject body) async
+    test('test createPaymentIntentConfig', () async {
+      // TODO
+    });
+
+    //Future<PaymentIntentResponse> deletePaymentIntentConfig(String authorization, String id) async
+    test('test deletePaymentIntentConfig', () async {
+      // TODO
+    });
+
+    //Future<BuiltList<PaymentIntentResponse>> getAllPaymentIntentConfigs(String authorization) async
+    test('test getAllPaymentIntentConfigs', () async {
+      // TODO
+    });
+
+    //Future<PaymentIntentResponse> getOnePaymentIntentConfigs(String authorization, String id) async
+    test('test getOnePaymentIntentConfigs', () async {
+      // TODO
+    });
+
     //Future<JsonObject> moralisWebhook(String id, IWebhook iWebhook) async
     test('test moralisWebhook', () async {
       // TODO
@@ -42,8 +62,13 @@ void main() {
       // TODO
     });
 
-    //Future<JsonObject> tatumWebhook(String id, JsonObject body) async
+    //Future<JsonObject> tatumWebhook(String id, TatumTransactionEvent tatumTransactionEvent) async
     test('test tatumWebhook', () async {
+      // TODO
+    });
+
+    //Future<PaymentIntentResponse> updatePaymentIntentConfig(String authorization, String id, JsonObject body) async
+    test('test updatePaymentIntentConfig', () async {
       // TODO
     });
 

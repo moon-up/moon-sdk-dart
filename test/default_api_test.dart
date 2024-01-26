@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for DefaultApi
 void main() {
-  final instance = Openapi().getDefaultApi();
+  final instance = Moonsdk().getDefaultApi();
 
   group(DefaultApi, () {
     //Future<PingResponse> getMessage() async

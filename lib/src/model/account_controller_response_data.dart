@@ -3,23 +3,23 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/ens_resolve_response.dart';
-import 'package:openapi/src/model/tx.dart';
-import 'package:openapi/src/model/erc1155_response.dart';
-import 'package:openapi/src/model/aave_reserves_data.dart';
-import 'package:openapi/src/model/bitcoin_transaction_output.dart';
-import 'package:openapi/src/model/erc20_response.dart';
-import 'package:openapi/src/model/erc721_response.dart';
-import 'package:openapi/src/model/sign_message.dart';
-import 'package:openapi/src/model/account_response.dart';
+import 'package:moonsdk/src/model/bitcoin_transaction_output.dart';
+import 'package:moonsdk/src/model/nonce_response.dart';
+import 'package:moonsdk/src/model/sign_message.dart';
+import 'package:moonsdk/src/model/erc1155_response.dart';
+import 'package:moonsdk/src/model/transaction.dart';
+import 'package:moonsdk/src/model/balance_response.dart';
+import 'package:moonsdk/src/model/erc721_response.dart';
+import 'package:moonsdk/src/model/account_response.dart';
+import 'package:moonsdk/src/model/aave_reserves_data.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/transaction_data.dart';
-import 'package:openapi/src/model/broad_cast_raw_transaction_response.dart';
-import 'package:openapi/src/model/nonce_response.dart';
-import 'package:openapi/src/model/ens_reverse_resolve_response.dart';
-import 'package:openapi/src/model/balance_response.dart';
-import 'package:openapi/src/model/transaction_request.dart';
-import 'package:openapi/src/model/transaction.dart';
+import 'package:moonsdk/src/model/transaction_data.dart';
+import 'package:moonsdk/src/model/transaction_request.dart';
+import 'package:moonsdk/src/model/ens_resolve_response.dart';
+import 'package:moonsdk/src/model/ens_reverse_resolve_response.dart';
+import 'package:moonsdk/src/model/erc20_response.dart';
+import 'package:moonsdk/src/model/broad_cast_raw_transaction_response.dart';
+import 'package:moonsdk/src/model/tx.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/any_of.dart';

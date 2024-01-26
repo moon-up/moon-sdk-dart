@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for AccountsApi
 void main() {
-  final instance = Openapi().getAccountsApi();
+  final instance = Moonsdk().getAccountsApi();
 
   group(AccountsApi, () {
     //Future<AccountControllerResponse> broadcastTx(String authorization, String accountName, BroadcastInput broadcastInput) async

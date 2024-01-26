@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for CosmosApi
 void main() {
-  final instance = Openapi().getCosmosApi();
+  final instance = Moonsdk().getCosmosApi();
 
   group(CosmosApi, () {
     //Future<AccountControllerResponse> createCosmosAccount(String authorization, CosmosInput cosmosInput) async

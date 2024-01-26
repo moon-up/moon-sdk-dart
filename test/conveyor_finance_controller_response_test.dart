@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 // tests for ConveyorFinanceControllerResponse
 void main() {
@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // Transaction data
+    // TransactionData data
     test('to test the property `data`', () async {
       // TODO
     });

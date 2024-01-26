@@ -12,12 +12,16 @@ part 'create_payment_intent_input.g.dart';
 /// CreatePaymentIntentInput
 ///
 /// Properties:
+/// * [config] 
 /// * [metadata] 
 /// * [network] 
 /// * [amount] 
 /// * [currency] 
 @BuiltValue()
 abstract class CreatePaymentIntentInput implements Built<CreatePaymentIntentInput, CreatePaymentIntentInputBuilder> {
+  @BuiltValueField(wireName: r'config')
+  String? get config;
+
   @BuiltValueField(wireName: r'metadata')
   BuiltMap<String, String> get metadata;
 
@@ -53,6 +57,13 @@ class _$CreatePaymentIntentInputSerializer implements PrimitiveSerializer<Create
     CreatePaymentIntentInput object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.config != null) {
+      yield r'config';
+      yield serializers.serialize(
+        object.config,
+        specifiedType: const FullType(String),
+      );
+    }
     yield r'metadata';
     yield serializers.serialize(
       object.metadata,
@@ -100,6 +111,13 @@ class _$CreatePaymentIntentInputSerializer implements PrimitiveSerializer<Create
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'config':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.config = valueDes;
+          break;
         case r'metadata':
           final valueDes = serializers.deserialize(
             value,

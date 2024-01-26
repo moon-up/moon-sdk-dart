@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for LitecoinApi
 void main() {
-  final instance = Openapi().getLitecoinApi();
+  final instance = Moonsdk().getLitecoinApi();
 
   group(LitecoinApi, () {
     //Future<AccountControllerResponse> createLitecoinAccount(String authorization, LitecoinInput litecoinInput) async

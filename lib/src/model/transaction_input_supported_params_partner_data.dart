@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/transaction_input_supported_params_partner_data_redirect_url.dart';
+import 'package:moonsdk/src/model/transaction_input_supported_params_partner_data_redirect_url.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

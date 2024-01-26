@@ -1,13 +1,14 @@
-# openapi.model.CreatePaymentIntentInput
+# moonsdk.model.CreatePaymentIntentInput
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**config** | **String** |  | [optional] 
 **metadata** | **BuiltMap&lt;String, String&gt;** |  | 
 **network** | **String** |  | [optional] 
 **amount** | **double** |  | 

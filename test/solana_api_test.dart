@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for SolanaApi
 void main() {
-  final instance = Openapi().getSolanaApi();
+  final instance = Moonsdk().getSolanaApi();
 
   group(SolanaApi, () {
     //Future<AccountControllerResponse> createSolanaAccount(String authorization, SolanaInput solanaInput) async

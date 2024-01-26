@@ -1,8 +1,8 @@
-# openapi.model.PingResponse
+# moonsdk.model.PingResponse
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties

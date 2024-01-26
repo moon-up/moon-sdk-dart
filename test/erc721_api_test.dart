@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for Erc721Api
 void main() {
-  final instance = Openapi().getErc721Api();
+  final instance = Moonsdk().getErc721Api();
 
   group(Erc721Api, () {
     //Future<AccountControllerResponse> approve(String authorization, String name, Erc721Request erc721Request) async

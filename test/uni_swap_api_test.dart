@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for UniSwapApi
 void main() {
-  final instance = Openapi().getUniSwapApi();
+  final instance = Moonsdk().getUniSwapApi();
 
   group(UniSwapApi, () {
     //Future<AccountControllerResponse> addLiquidity(String authorization, String name, UniswapInput uniswapInput) async

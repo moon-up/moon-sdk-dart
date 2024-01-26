@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for BitcoincashApi
 void main() {
-  final instance = Openapi().getBitcoincashApi();
+  final instance = Moonsdk().getBitcoincashApi();
 
   group(BitcoincashApi, () {
     //Future<AccountControllerResponse> createBitcoinCashAccount(String authorization, BitcoinCashInput bitcoinCashInput) async

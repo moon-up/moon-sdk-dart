@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 // tests for Transaction
 void main() {
@@ -7,11 +7,6 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Transaction, () {
-    // String moonScanUrl
-    test('to test the property `moonScanUrl`', () async {
-      // TODO
-    });
-
     // String transactionHash
     test('to test the property `transactionHash`', () async {
       // TODO
@@ -22,13 +17,23 @@ void main() {
       // TODO
     });
 
-    // String signedMessage
-    test('to test the property `signedMessage`', () async {
+    // String rawTransaction
+    test('to test the property `rawTransaction`', () async {
       // TODO
     });
 
-    // String rawTransaction
-    test('to test the property `rawTransaction`', () async {
+    // String data
+    test('to test the property `data`', () async {
+      // TODO
+    });
+
+    // BuiltList<TransactionData> transactions
+    test('to test the property `transactions`', () async {
+      // TODO
+    });
+
+    // String moonScanUrl
+    test('to test the property `moonScanUrl`', () async {
       // TODO
     });
 
@@ -37,7 +42,7 @@ void main() {
       // TODO
     });
 
-    // BuiltMap<String, Tx> transaction
+    // Tx transaction
     test('to test the property `transaction`', () async {
       // TODO
     });

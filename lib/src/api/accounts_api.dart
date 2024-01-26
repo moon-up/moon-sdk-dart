@@ -7,14 +7,14 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/account_controller_response.dart';
-import 'package:openapi/src/model/broadcast_input.dart';
-import 'package:openapi/src/model/create_account_input.dart';
-import 'package:openapi/src/model/deploy_input.dart';
-import 'package:openapi/src/model/input_body.dart';
-import 'package:openapi/src/model/sign_message.dart';
-import 'package:openapi/src/model/sign_typed_data.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/broadcast_input.dart';
+import 'package:moonsdk/src/model/create_account_input.dart';
+import 'package:moonsdk/src/model/deploy_input.dart';
+import 'package:moonsdk/src/model/input_body.dart';
+import 'package:moonsdk/src/model/sign_message.dart';
+import 'package:moonsdk/src/model/sign_typed_data.dart';
 
 class AccountsApi {
 

@@ -1,8 +1,8 @@
-# openapi.api.ENSApi
+# moonsdk.api.ENSApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 All URIs are relative to *https://vault-api.usemoon.ai*
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -29,7 +29,7 @@ import 'package:openapi/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Openapi().getENSApi();
+final api = Moonsdk().getENSApi();
 final String authorization = authorization_example; // String | 
 final EnsResolveInput ensResolveInput = ; // EnsResolveInput | 
 

@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/ping_response.dart';
+import 'package:moonsdk/src/model/ping_response.dart';
 
 class DefaultApi {
 

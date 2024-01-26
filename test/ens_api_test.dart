@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for ENSApi
 void main() {
-  final instance = Openapi().getENSApi();
+  final instance = Moonsdk().getENSApi();
 
   group(ENSApi, () {
     //Future<AccountControllerResponse> resolve(String authorization, EnsResolveInput ensResolveInput) async

@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/inft_approval_erc1155.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/inft_approval_erc721.dart';
+import 'package:moonsdk/src/model/inft_approval_erc1155.dart';
+import 'package:moonsdk/src/model/inft_approval_erc721.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

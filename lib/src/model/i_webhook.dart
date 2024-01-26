@@ -3,18 +3,18 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/i_old_nft_approval.dart';
-import 'package:openapi/src/model/log.dart';
-import 'package:openapi/src/model/ierc20_approval.dart';
+import 'package:moonsdk/src/model/block.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:openapi/src/model/inft_approval.dart';
-import 'package:openapi/src/model/ierc20_transfer.dart';
-import 'package:openapi/src/model/i_native_balance.dart';
-import 'package:openapi/src/model/inft_transfer.dart';
-import 'package:openapi/src/model/block.dart';
-import 'package:openapi/src/model/internal_transaction.dart';
-import 'package:openapi/src/model/transaction.dart';
-import 'package:openapi/src/model/abi_item.dart';
+import 'package:moonsdk/src/model/ierc20_transfer.dart';
+import 'package:moonsdk/src/model/ierc20_approval.dart';
+import 'package:moonsdk/src/model/internal_transaction.dart';
+import 'package:moonsdk/src/model/inft_transfer.dart';
+import 'package:moonsdk/src/model/i_old_nft_approval.dart';
+import 'package:moonsdk/src/model/transaction.dart';
+import 'package:moonsdk/src/model/inft_approval.dart';
+import 'package:moonsdk/src/model/i_native_balance.dart';
+import 'package:moonsdk/src/model/abi_item.dart';
+import 'package:moonsdk/src/model/log.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

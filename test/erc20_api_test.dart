@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for Erc20Api
 void main() {
-  final instance = Openapi().getErc20Api();
+  final instance = Moonsdk().getErc20Api();
 
   group(Erc20Api, () {
     //Future<AccountControllerResponse> allowanceErc20(String authorization, String name, InputBody inputBody) async

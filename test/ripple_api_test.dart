@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for RippleApi
 void main() {
-  final instance = Openapi().getRippleApi();
+  final instance = Moonsdk().getRippleApi();
 
   group(RippleApi, () {
     //Future<AccountControllerResponse> createRippleAccount(String authorization, RippleInput rippleInput) async

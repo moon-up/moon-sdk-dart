@@ -7,8 +7,8 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/account_controller_response.dart';
-import 'package:openapi/src/model/ens_resolve_input.dart';
+import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/ens_resolve_input.dart';
 
 class ENSApi {
 

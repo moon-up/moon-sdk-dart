@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for TronApi
 void main() {
-  final instance = Openapi().getTronApi();
+  final instance = Moonsdk().getTronApi();
 
   group(TronApi, () {
     //Future<AccountControllerResponse> createTronAccount(String authorization, TronInput tronInput) async

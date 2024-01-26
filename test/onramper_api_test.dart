@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for OnramperApi
 void main() {
-  final instance = Openapi().getOnramperApi();
+  final instance = Moonsdk().getOnramperApi();
 
   group(OnramperApi, () {
     //Future<JsonObject> onRamperCheckout(String authorization, String accountName, TransactionInput transactionInput) async

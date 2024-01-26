@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:moonsdk/moonsdk.dart';
 
 
 /// tests for YearnApi
 void main() {
-  final instance = Openapi().getYearnApi();
+  final instance = Moonsdk().getYearnApi();
 
   group(YearnApi, () {
     //Future<AccountControllerResponse> addLiquidity(String authorization, String name, InputBody inputBody) async
