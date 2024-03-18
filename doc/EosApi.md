@@ -5,7 +5,7 @@
 import 'package:moonsdk/api.dart';
 ```
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **createEosAccount**
-> AccountControllerResponse createEosAccount(authorization, eosInput)
+> AccountAPIResponse createEosAccount(authorization, eosInput)
 
 
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEosAccount**
-> AccountControllerResponse getEosAccount(authorization, accountName)
+> AccountAPIResponse getEosAccount(authorization, accountName)
 
 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listEosAccounts**
-> AccountControllerResponse listEosAccounts(authorization)
+> AccountAPIResponse listEosAccounts(authorization)
 
 
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**AccountAPIResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **signEosTransaction**
-> AccountControllerResponse signEosTransaction(authorization, accountName, eosTransactionInput)
+> EosAPIResponse signEosTransaction(authorization, accountName, eosTransactionInput)
 
 
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**EosAPIResponse**](EosAPIResponse.md)
 
 ### Authorization
 

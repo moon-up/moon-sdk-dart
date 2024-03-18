@@ -26,7 +26,6 @@ import 'package:moonsdk/src/api/erc721_api.dart';
 import 'package:moonsdk/src/api/litecoin_api.dart';
 import 'package:moonsdk/src/api/oneinch_api.dart';
 import 'package:moonsdk/src/api/onramper_api.dart';
-import 'package:moonsdk/src/api/payment_api.dart';
 import 'package:moonsdk/src/api/ripple_api.dart';
 import 'package:moonsdk/src/api/solana_api.dart';
 import 'package:moonsdk/src/api/tron_api.dart';
@@ -34,7 +33,7 @@ import 'package:moonsdk/src/api/uni_swap_api.dart';
 import 'package:moonsdk/src/api/yearn_api.dart';
 
 class Moonsdk {
-  static const String basePath = r'https://vault-api.usemoon.ai';
+  static const String basePath = r'https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app';
 
   final Dio dio;
   final Serializers serializers;
@@ -187,12 +186,6 @@ class Moonsdk {
   /// by doing that all interceptors will not be executed
   OnramperApi getOnramperApi() {
     return OnramperApi(dio, serializers);
-  }
-
-  /// Get PaymentApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  PaymentApi getPaymentApi() {
-    return PaymentApi(dio, serializers);
   }
 
   /// Get RippleApi instance, base route and serializer can be overridden by a given but be careful,

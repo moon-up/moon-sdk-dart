@@ -5,7 +5,7 @@
 import 'package:moonsdk/api.dart';
 ```
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

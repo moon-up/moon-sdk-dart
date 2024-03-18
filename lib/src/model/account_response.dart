@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:built_collection/built_collection.dart';
+import 'package:moonsdk/src/model/account_data.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,15 +12,11 @@ part 'account_response.g.dart';
 /// AccountResponse
 ///
 /// Properties:
-/// * [keys] 
-/// * [address] 
+/// * [data] 
 @BuiltValue()
 abstract class AccountResponse implements Built<AccountResponse, AccountResponseBuilder> {
-  @BuiltValueField(wireName: r'keys')
-  BuiltList<String>? get keys;
-
-  @BuiltValueField(wireName: r'address')
-  String? get address;
+  @BuiltValueField(wireName: r'data')
+  AccountData get data;
 
   AccountResponse._();
 
@@ -45,20 +41,11 @@ class _$AccountResponseSerializer implements PrimitiveSerializer<AccountResponse
     AccountResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.keys != null) {
-      yield r'keys';
-      yield serializers.serialize(
-        object.keys,
-        specifiedType: const FullType(BuiltList, [FullType(String)]),
-      );
-    }
-    if (object.address != null) {
-      yield r'address';
-      yield serializers.serialize(
-        object.address,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'data';
+    yield serializers.serialize(
+      object.data,
+      specifiedType: const FullType(AccountData),
+    );
   }
 
   @override
@@ -82,19 +69,12 @@ class _$AccountResponseSerializer implements PrimitiveSerializer<AccountResponse
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'keys':
+        case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(String)]),
-          ) as BuiltList<String>;
-          result.keys.replace(valueDes);
-          break;
-        case r'address':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.address = valueDes;
+            specifiedType: const FullType(AccountData),
+          ) as AccountData;
+          result.data.replace(valueDes);
           break;
         default:
           unhandled.add(key);

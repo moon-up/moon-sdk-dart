@@ -8,8 +8,9 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/account_api_response.dart';
 import 'package:moonsdk/src/model/input_body.dart';
+import 'package:moonsdk/src/model/transaction_api_response.dart';
 
 class Erc4337Api {
 
@@ -33,9 +34,9 @@ class Erc4337Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getAddress({ 
+  Future<Response<AccountAPIResponse>> getAddress({ 
     required String authorization,
     required String accountName,
     required InputBody inputBody,
@@ -100,14 +101,14 @@ class Erc4337Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -119,7 +120,7 @@ class Erc4337Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -145,9 +146,9 @@ class Erc4337Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signBroadcastUserOpTx({ 
+  Future<Response<TransactionAPIResponse>> signBroadcastUserOpTx({ 
     required String authorization,
     required String accountName,
     required InputBody inputBody,
@@ -212,14 +213,14 @@ class Erc4337Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -231,7 +232,7 @@ class Erc4337Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

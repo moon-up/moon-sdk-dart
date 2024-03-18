@@ -8,13 +8,18 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/account_api_response.dart';
+import 'package:moonsdk/src/model/balance_api_response.dart';
+import 'package:moonsdk/src/model/broad_cast_raw_transaction_api_response.dart';
 import 'package:moonsdk/src/model/broadcast_input.dart';
 import 'package:moonsdk/src/model/create_account_input.dart';
 import 'package:moonsdk/src/model/deploy_input.dart';
 import 'package:moonsdk/src/model/input_body.dart';
+import 'package:moonsdk/src/model/nonce_api_response.dart';
 import 'package:moonsdk/src/model/sign_message.dart';
+import 'package:moonsdk/src/model/sign_message_api_response.dart';
 import 'package:moonsdk/src/model/sign_typed_data.dart';
+import 'package:moonsdk/src/model/transaction_api_response.dart';
 
 class AccountsApi {
 
@@ -38,9 +43,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BroadCastRawTransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> broadcastTx({ 
+  Future<Response<BroadCastRawTransactionAPIResponse>> broadcastTx({ 
     required String authorization,
     required String accountName,
     required BroadcastInput broadcastInput,
@@ -105,14 +110,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    BroadCastRawTransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(BroadCastRawTransactionAPIResponse),
+      ) as BroadCastRawTransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -124,7 +129,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<BroadCastRawTransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -149,9 +154,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> createAccount({ 
+  Future<Response<AccountAPIResponse>> createAccount({ 
     required String authorization,
     required CreateAccountInput createAccountInput,
     CancelToken? cancelToken,
@@ -215,14 +220,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -234,7 +239,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -259,9 +264,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> deleteAccount({ 
+  Future<Response<AccountAPIResponse>> deleteAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -305,14 +310,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -324,7 +329,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -350,9 +355,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> deployContract({ 
+  Future<Response<TransactionAPIResponse>> deployContract({ 
     required String authorization,
     required String accountName,
     required DeployInput deployInput,
@@ -417,14 +422,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -436,7 +441,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -461,9 +466,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getAccount({ 
+  Future<Response<AccountAPIResponse>> getAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -507,14 +512,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -526,7 +531,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -552,9 +557,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BalanceAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getBalance({ 
+  Future<Response<BalanceAPIResponse>> getBalance({ 
     required String accountName,
     required String authorization,
     required String chainId,
@@ -604,14 +609,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    BalanceAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(BalanceAPIResponse),
+      ) as BalanceAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -623,7 +628,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<BalanceAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -648,9 +653,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [NonceAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getNonce({ 
+  Future<Response<NonceAPIResponse>> getNonce({ 
     required String accountName,
     required String authorization,
     CancelToken? cancelToken,
@@ -694,14 +699,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    NonceAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(NonceAPIResponse),
+      ) as NonceAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -713,7 +718,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<NonceAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -737,9 +742,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> listAccounts({ 
+  Future<Response<AccountAPIResponse>> listAccounts({ 
     required String authorization,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -782,14 +787,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -801,7 +806,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -827,9 +832,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [SignMessageAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signMessage({ 
+  Future<Response<SignMessageAPIResponse>> signMessage({ 
     required String accountName,
     required String authorization,
     required SignMessage signMessage,
@@ -894,14 +899,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    SignMessageAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(SignMessageAPIResponse),
+      ) as SignMessageAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -913,7 +918,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<SignMessageAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -939,9 +944,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signTransaction({ 
+  Future<Response<TransactionAPIResponse>> signTransaction({ 
     required String accountName,
     required String authorization,
     required InputBody inputBody,
@@ -1006,14 +1011,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1025,7 +1030,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1051,9 +1056,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [SignMessageAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signTypedData({ 
+  Future<Response<SignMessageAPIResponse>> signTypedData({ 
     required String accountName,
     required String authorization,
     required SignTypedData signTypedData,
@@ -1118,14 +1123,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    SignMessageAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(SignMessageAPIResponse),
+      ) as SignMessageAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1137,7 +1142,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<SignMessageAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1163,9 +1168,9 @@ class AccountsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> transferEth({ 
+  Future<Response<TransactionAPIResponse>> transferEth({ 
     required String accountName,
     required String authorization,
     required InputBody inputBody,
@@ -1230,14 +1235,14 @@ class AccountsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1249,7 +1254,7 @@ class AccountsApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

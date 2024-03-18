@@ -8,7 +8,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_controller_response.dart';
+import 'package:moonsdk/src/model/account_api_response.dart';
+import 'package:moonsdk/src/model/bitcoin_cash_api_response.dart';
 import 'package:moonsdk/src/model/bitcoin_cash_input.dart';
 import 'package:moonsdk/src/model/bitcoin_cash_transaction_input.dart';
 
@@ -33,9 +34,9 @@ class BitcoincashApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> createBitcoinCashAccount({ 
+  Future<Response<AccountAPIResponse>> createBitcoinCashAccount({ 
     required String authorization,
     required BitcoinCashInput bitcoinCashInput,
     CancelToken? cancelToken,
@@ -99,14 +100,14 @@ class BitcoincashApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -118,7 +119,7 @@ class BitcoincashApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -143,9 +144,9 @@ class BitcoincashApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getBitcoinCashAccount({ 
+  Future<Response<AccountAPIResponse>> getBitcoinCashAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -189,14 +190,14 @@ class BitcoincashApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -208,7 +209,7 @@ class BitcoincashApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -232,9 +233,9 @@ class BitcoincashApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> listBitcoinCashAccounts({ 
+  Future<Response<AccountAPIResponse>> listBitcoinCashAccounts({ 
     required String authorization,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -277,14 +278,14 @@ class BitcoincashApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -296,7 +297,7 @@ class BitcoincashApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -322,9 +323,9 @@ class BitcoincashApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [BitcoinCashAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signBitcoinCashTransaction({ 
+  Future<Response<BitcoinCashAPIResponse>> signBitcoinCashTransaction({ 
     required String authorization,
     required String accountName,
     required BitcoinCashTransactionInput bitcoinCashTransactionInput,
@@ -389,14 +390,14 @@ class BitcoincashApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    BitcoinCashAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(BitcoinCashAPIResponse),
+      ) as BitcoinCashAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -408,7 +409,7 @@ class BitcoincashApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<BitcoinCashAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

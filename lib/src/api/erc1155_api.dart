@@ -8,8 +8,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_controller_response.dart';
 import 'package:moonsdk/src/model/erc1155_request.dart';
+import 'package:moonsdk/src/model/transaction_api_response.dart';
 
 class ERC1155Api {
 
@@ -33,9 +33,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> balanceOf({ 
+  Future<Response<TransactionAPIResponse>> balanceOf({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -100,14 +100,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -119,7 +119,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -145,9 +145,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> balanceOfBatch({ 
+  Future<Response<TransactionAPIResponse>> balanceOfBatch({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -212,14 +212,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -231,7 +231,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -257,9 +257,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> isApprovedForAll({ 
+  Future<Response<TransactionAPIResponse>> isApprovedForAll({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -324,14 +324,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -343,7 +343,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -369,9 +369,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> safeBatchTransferFrom({ 
+  Future<Response<TransactionAPIResponse>> safeBatchTransferFrom({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -436,14 +436,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -455,7 +455,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -481,9 +481,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> safeTransferFrom({ 
+  Future<Response<TransactionAPIResponse>> safeTransferFrom({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -548,14 +548,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -567,7 +567,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -593,9 +593,9 @@ class ERC1155Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> setApprovalForAll({ 
+  Future<Response<TransactionAPIResponse>> setApprovalForAll({ 
     required String name,
     required String authorization,
     required Erc1155Request erc1155Request,
@@ -660,14 +660,14 @@ class ERC1155Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    TransactionAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(TransactionAPIResponse),
+      ) as TransactionAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -679,7 +679,7 @@ class ERC1155Api {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<TransactionAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
