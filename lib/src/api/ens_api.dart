@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/account_controller_response.dart';
+import 'package:openapi/src/model/ens_resolve_api_response.dart';
 import 'package:openapi/src/model/ens_resolve_input.dart';
 
 class ENSApi {
@@ -31,9 +31,9 @@ class ENSApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [EnsResolveAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> resolve({ 
+  Future<Response<EnsResolveAPIResponse>> resolve({ 
     required String authorization,
     required EnsResolveInput ensResolveInput,
     CancelToken? cancelToken,
@@ -97,14 +97,14 @@ class ENSApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    EnsResolveAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(EnsResolveAPIResponse),
+      ) as EnsResolveAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -116,7 +116,7 @@ class ENSApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<EnsResolveAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -8,7 +8,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/account_controller_response.dart';
+import 'package:openapi/src/model/account_api_response.dart';
+import 'package:openapi/src/model/cosmos_api_response.dart';
 import 'package:openapi/src/model/cosmos_input.dart';
 import 'package:openapi/src/model/cosmos_transaction_input.dart';
 
@@ -33,9 +34,9 @@ class CosmosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> createCosmosAccount({ 
+  Future<Response<AccountAPIResponse>> createCosmosAccount({ 
     required String authorization,
     required CosmosInput cosmosInput,
     CancelToken? cancelToken,
@@ -99,14 +100,14 @@ class CosmosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -118,7 +119,7 @@ class CosmosApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -143,9 +144,9 @@ class CosmosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> getCosmosAccount({ 
+  Future<Response<AccountAPIResponse>> getCosmosAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -189,14 +190,14 @@ class CosmosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -208,7 +209,7 @@ class CosmosApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -232,9 +233,9 @@ class CosmosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> listCosmosAccounts({ 
+  Future<Response<AccountAPIResponse>> listCosmosAccounts({ 
     required String authorization,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -277,14 +278,14 @@ class CosmosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    AccountAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(AccountAPIResponse),
+      ) as AccountAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -296,7 +297,7 @@ class CosmosApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<AccountAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -322,9 +323,9 @@ class CosmosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
+  /// Returns a [Future] containing a [Response] with a [CosmosAPIResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountControllerResponse>> signCosmosTransaction({ 
+  Future<Response<CosmosAPIResponse>> signCosmosTransaction({ 
     required String authorization,
     required String accountName,
     required CosmosTransactionInput cosmosTransactionInput,
@@ -389,14 +390,14 @@ class CosmosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountControllerResponse? _responseData;
+    CosmosAPIResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountControllerResponse),
-      ) as AccountControllerResponse;
+        specifiedType: const FullType(CosmosAPIResponse),
+      ) as CosmosAPIResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -408,7 +409,7 @@ class CosmosApi {
       );
     }
 
-    return Response<AccountControllerResponse>(
+    return Response<CosmosAPIResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

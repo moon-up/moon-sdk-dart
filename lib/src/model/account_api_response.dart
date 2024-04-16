@@ -3,7 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:moonsdk/src/model/account_response.dart';
+import 'package:openapi/src/model/account_response.dart';
+import 'package:openapi/src/model/input_body.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,6 +15,8 @@ part 'account_api_response.g.dart';
 /// Properties:
 /// * [success] 
 /// * [message] 
+/// * [body] 
+/// * [address] 
 /// * [data] 
 @BuiltValue()
 abstract class AccountAPIResponse implements Built<AccountAPIResponse, AccountAPIResponseBuilder> {
@@ -22,6 +25,12 @@ abstract class AccountAPIResponse implements Built<AccountAPIResponse, AccountAP
 
   @BuiltValueField(wireName: r'message')
   String get message;
+
+  @BuiltValueField(wireName: r'body')
+  InputBody? get body;
+
+  @BuiltValueField(wireName: r'address')
+  String? get address;
 
   @BuiltValueField(wireName: r'data')
   AccountResponse? get data;
@@ -59,6 +68,20 @@ class _$AccountAPIResponseSerializer implements PrimitiveSerializer<AccountAPIRe
       object.message,
       specifiedType: const FullType(String),
     );
+    if (object.body != null) {
+      yield r'body';
+      yield serializers.serialize(
+        object.body,
+        specifiedType: const FullType(InputBody),
+      );
+    }
+    if (object.address != null) {
+      yield r'address';
+      yield serializers.serialize(
+        object.address,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.data != null) {
       yield r'data';
       yield serializers.serialize(
@@ -102,6 +125,20 @@ class _$AccountAPIResponseSerializer implements PrimitiveSerializer<AccountAPIRe
             specifiedType: const FullType(String),
           ) as String;
           result.message = valueDes;
+          break;
+        case r'body':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(InputBody),
+          ) as InputBody;
+          result.body.replace(valueDes);
+          break;
+        case r'address':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.address = valueDes;
           break;
         case r'data':
           final valueDes = serializers.deserialize(

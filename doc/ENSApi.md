@@ -5,7 +5,7 @@
 import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://beta.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **resolve**
-> AccountControllerResponse resolve(authorization, ensResolveInput)
+> EnsResolveAPIResponse resolve(authorization, ensResolveInput)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountControllerResponse**](AccountControllerResponse.md)
+[**EnsResolveAPIResponse**](EnsResolveAPIResponse.md)
 
 ### Authorization
 

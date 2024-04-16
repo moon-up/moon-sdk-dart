@@ -3,7 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:moonsdk/src/model/transaction.dart';
+import 'package:openapi/src/model/transaction.dart';
+import 'package:openapi/src/model/input_body.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,6 +16,10 @@ part 'transaction_api_response.g.dart';
 /// Properties:
 /// * [success] 
 /// * [message] 
+/// * [body] 
+/// * [address] 
+/// * [transactionHash] 
+/// * [signedTx] 
 /// * [data] 
 @BuiltValue()
 abstract class TransactionAPIResponse implements Built<TransactionAPIResponse, TransactionAPIResponseBuilder> {
@@ -22,6 +28,18 @@ abstract class TransactionAPIResponse implements Built<TransactionAPIResponse, T
 
   @BuiltValueField(wireName: r'message')
   String get message;
+
+  @BuiltValueField(wireName: r'body')
+  InputBody? get body;
+
+  @BuiltValueField(wireName: r'address')
+  String? get address;
+
+  @BuiltValueField(wireName: r'transaction_hash')
+  JsonObject? get transactionHash;
+
+  @BuiltValueField(wireName: r'signedTx')
+  JsonObject? get signedTx;
 
   @BuiltValueField(wireName: r'data')
   Transaction? get data;
@@ -59,6 +77,34 @@ class _$TransactionAPIResponseSerializer implements PrimitiveSerializer<Transact
       object.message,
       specifiedType: const FullType(String),
     );
+    if (object.body != null) {
+      yield r'body';
+      yield serializers.serialize(
+        object.body,
+        specifiedType: const FullType(InputBody),
+      );
+    }
+    if (object.address != null) {
+      yield r'address';
+      yield serializers.serialize(
+        object.address,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.transactionHash != null) {
+      yield r'transaction_hash';
+      yield serializers.serialize(
+        object.transactionHash,
+        specifiedType: const FullType.nullable(JsonObject),
+      );
+    }
+    if (object.signedTx != null) {
+      yield r'signedTx';
+      yield serializers.serialize(
+        object.signedTx,
+        specifiedType: const FullType.nullable(JsonObject),
+      );
+    }
     if (object.data != null) {
       yield r'data';
       yield serializers.serialize(
@@ -102,6 +148,36 @@ class _$TransactionAPIResponseSerializer implements PrimitiveSerializer<Transact
             specifiedType: const FullType(String),
           ) as String;
           result.message = valueDes;
+          break;
+        case r'body':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(InputBody),
+          ) as InputBody;
+          result.body.replace(valueDes);
+          break;
+        case r'address':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.address = valueDes;
+          break;
+        case r'transaction_hash':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(JsonObject),
+          ) as JsonObject?;
+          if (valueDes == null) continue;
+          result.transactionHash = valueDes;
+          break;
+        case r'signedTx':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(JsonObject),
+          ) as JsonObject?;
+          if (valueDes == null) continue;
+          result.signedTx = valueDes;
           break;
         case r'data':
           final valueDes = serializers.deserialize(

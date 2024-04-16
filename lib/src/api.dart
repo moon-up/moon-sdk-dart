@@ -21,12 +21,10 @@ import 'package:openapi/src/api/ens_api.dart';
 import 'package:openapi/src/api/erc1155_api.dart';
 import 'package:openapi/src/api/eos_api.dart';
 import 'package:openapi/src/api/erc20_api.dart';
-import 'package:openapi/src/api/erc4337_api.dart';
 import 'package:openapi/src/api/erc721_api.dart';
 import 'package:openapi/src/api/litecoin_api.dart';
 import 'package:openapi/src/api/oneinch_api.dart';
 import 'package:openapi/src/api/onramper_api.dart';
-import 'package:openapi/src/api/payment_api.dart';
 import 'package:openapi/src/api/ripple_api.dart';
 import 'package:openapi/src/api/solana_api.dart';
 import 'package:openapi/src/api/tron_api.dart';
@@ -34,7 +32,7 @@ import 'package:openapi/src/api/uni_swap_api.dart';
 import 'package:openapi/src/api/yearn_api.dart';
 
 class Openapi {
-  static const String basePath = r'https://vault-api.usemoon.ai';
+  static const String basePath = r'https://beta.usemoon.ai';
 
   final Dio dio;
   final Serializers serializers;
@@ -159,12 +157,6 @@ class Openapi {
     return Erc20Api(dio, serializers);
   }
 
-  /// Get Erc4337Api instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  Erc4337Api getErc4337Api() {
-    return Erc4337Api(dio, serializers);
-  }
-
   /// Get Erc721Api instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   Erc721Api getErc721Api() {
@@ -187,12 +179,6 @@ class Openapi {
   /// by doing that all interceptors will not be executed
   OnramperApi getOnramperApi() {
     return OnramperApi(dio, serializers);
-  }
-
-  /// Get PaymentApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  PaymentApi getPaymentApi() {
-    return PaymentApi(dio, serializers);
   }
 
   /// Get RippleApi instance, base route and serializer can be overridden by a given but be careful,

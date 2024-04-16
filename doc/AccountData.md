@@ -1,8 +1,8 @@
-# moonsdk.model.AccountData
+# openapi.model.AccountData
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties
