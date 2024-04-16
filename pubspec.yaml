@@ -1,9 +1,7 @@
-name: moonsdk
+name: openapi
 version: 1.0.0
-description: moon-sdk dart api client
+description: OpenAPI API client
 homepage: homepage
-repository: https://github.com/moon-up/moon-sdk-dart
-publish_to: usemoon.ai
 
 environment:
   sdk: '>=2.15.0 <3.0.0'

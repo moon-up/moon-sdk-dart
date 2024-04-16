@@ -7,9 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/transaction_api_response.dart';
-import 'package:moonsdk/src/model/uniswap_input.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/account_controller_response.dart';
+import 'package:openapi/src/model/uniswap_input.dart';
 
 class UniSwapApi {
 
@@ -33,9 +33,9 @@ class UniSwapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> addLiquidity({ 
+  Future<Response<AccountControllerResponse>> addLiquidity({ 
     required String authorization,
     required String name,
     required UniswapInput uniswapInput,
@@ -100,14 +100,14 @@ class UniSwapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -119,7 +119,7 @@ class UniSwapApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -145,9 +145,9 @@ class UniSwapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> removeLiquidity({ 
+  Future<Response<AccountControllerResponse>> removeLiquidity({ 
     required String authorization,
     required String name,
     required UniswapInput uniswapInput,
@@ -212,14 +212,14 @@ class UniSwapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -231,7 +231,7 @@ class UniSwapApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -257,9 +257,9 @@ class UniSwapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> swapExactETHForTokens({ 
+  Future<Response<AccountControllerResponse>> swapExactETHForTokens({ 
     required String authorization,
     required String name,
     required UniswapInput uniswapInput,
@@ -324,14 +324,14 @@ class UniSwapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -343,7 +343,7 @@ class UniSwapApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -369,9 +369,9 @@ class UniSwapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> swapExactTokensForTokens({ 
+  Future<Response<AccountControllerResponse>> swapExactTokensForTokens({ 
     required String authorization,
     required String name,
     required UniswapInput uniswapInput,
@@ -436,14 +436,14 @@ class UniSwapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -455,7 +455,7 @@ class UniSwapApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -7,10 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/aave_input.dart';
-import 'package:moonsdk/src/model/aave_reserves_api_response.dart';
-import 'package:moonsdk/src/model/transaction_api_response.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/aave_input.dart';
+import 'package:openapi/src/model/account_controller_response.dart';
 
 class AaveApi {
 
@@ -34,9 +33,9 @@ class AaveApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> borrow({ 
+  Future<Response<AccountControllerResponse>> borrow({ 
     required String authorization,
     required String name,
     required AaveInput aaveInput,
@@ -101,14 +100,14 @@ class AaveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -120,7 +119,7 @@ class AaveApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -146,9 +145,9 @@ class AaveApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> lend({ 
+  Future<Response<AccountControllerResponse>> lend({ 
     required String authorization,
     required String name,
     required AaveInput aaveInput,
@@ -213,14 +212,14 @@ class AaveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -232,7 +231,7 @@ class AaveApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -258,9 +257,9 @@ class AaveApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [TransactionAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TransactionAPIResponse>> repay({ 
+  Future<Response<AccountControllerResponse>> repay({ 
     required String authorization,
     required String name,
     required AaveInput aaveInput,
@@ -325,14 +324,14 @@ class AaveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    TransactionAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(TransactionAPIResponse),
-      ) as TransactionAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -344,7 +343,7 @@ class AaveApi {
       );
     }
 
-    return Response<TransactionAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -370,9 +369,9 @@ class AaveApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AaveReservesAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AaveReservesAPIResponse>> userReserveData({ 
+  Future<Response<AccountControllerResponse>> userReserveData({ 
     required String authorization,
     required String name,
     required AaveInput aaveInput,
@@ -437,14 +436,14 @@ class AaveApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AaveReservesAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AaveReservesAPIResponse),
-      ) as AaveReservesAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -456,7 +455,7 @@ class AaveApi {
       );
     }
 
-    return Response<AaveReservesAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

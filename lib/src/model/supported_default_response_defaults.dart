@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:moonsdk/src/model/supported_default_response_defaults_id.dart';
+import 'package:openapi/src/model/supported_default_response_defaults_id.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

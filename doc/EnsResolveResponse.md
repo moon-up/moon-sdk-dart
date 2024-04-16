@@ -1,8 +1,8 @@
-# moonsdk.model.EnsResolveResponse
+# openapi.model.EnsResolveResponse
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

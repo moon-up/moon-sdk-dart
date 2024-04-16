@@ -1,8 +1,8 @@
-# moonsdk.model.TransactionRequest
+# openapi.model.TransactionRequest
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

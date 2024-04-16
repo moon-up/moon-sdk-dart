@@ -1,11 +1,11 @@
-# moonsdk.api.SolanaApi
+# openapi.api.SolanaApi
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,13 +16,13 @@ Method | HTTP request | Description
 
 
 # **createSolanaAccount**
-> AccountAPIResponse createSolanaAccount(authorization, solanaInput)
+> AccountControllerResponse createSolanaAccount(authorization, solanaInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,7 +32,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getSolanaApi();
+final api = Openapi().getSolanaApi();
 final String authorization = authorization_example; // String | 
 final SolanaInput solanaInput = ; // SolanaInput | 
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -67,13 +67,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSolanaAccount**
-> AccountAPIResponse getSolanaAccount(authorization, accountName)
+> AccountControllerResponse getSolanaAccount(authorization, accountName)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -83,7 +83,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getSolanaApi();
+final api = Openapi().getSolanaApi();
 final String authorization = authorization_example; // String | 
 final String accountName = accountName_example; // String | 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -118,13 +118,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listSolanaAccounts**
-> AccountAPIResponse listSolanaAccounts(authorization)
+> AccountControllerResponse listSolanaAccounts(authorization)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -134,7 +134,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getSolanaApi();
+final api = Openapi().getSolanaApi();
 final String authorization = authorization_example; // String | 
 
 try {
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -167,13 +167,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **signSolanaTransaction**
-> SolanaAPIResponse signSolanaTransaction(authorization, accountName, solanaTransactionInput)
+> AccountControllerResponse signSolanaTransaction(authorization, accountName, solanaTransactionInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +183,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getSolanaApi();
+final api = Openapi().getSolanaApi();
 final String authorization = authorization_example; // String | 
 final String accountName = accountName_example; // String | 
 final SolanaTransactionInput solanaTransactionInput = ; // SolanaTransactionInput | 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SolanaAPIResponse**](SolanaAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 

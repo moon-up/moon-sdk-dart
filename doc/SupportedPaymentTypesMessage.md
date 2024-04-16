@@ -1,8 +1,8 @@
-# moonsdk.model.SupportedPaymentTypesMessage
+# openapi.model.SupportedPaymentTypesMessage
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

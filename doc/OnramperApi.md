@@ -1,11 +1,11 @@
-# moonsdk.api.OnramperApi
+# openapi.api.OnramperApi
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -37,7 +37,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String accountName = accountName_example; // String | 
 final TransactionInput transactionInput = ; // TransactionInput | 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -90,7 +90,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String fiat = fiat_example; // String | 
 final String crypto = crypto_example; // String | 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -153,7 +153,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String fiat = fiat_example; // String | 
 final String crypto = crypto_example; // String | 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -216,7 +216,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String source_ = source__example; // String | 
 final String country = country_example; // String | 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -269,7 +269,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String type = type_example; // String | 
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -320,7 +320,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String country = country_example; // String | 
 final String type = type_example; // String | 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -373,7 +373,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 
 try {
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -422,7 +422,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String fiat = fiat_example; // String | 
 final String country = country_example; // String | 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -477,7 +477,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getOnramperApi();
+final api = Openapi().getOnramperApi();
 final String authorization = authorization_example; // String | 
 final String fiat = fiat_example; // String | 
 final String country = country_example; // String | 

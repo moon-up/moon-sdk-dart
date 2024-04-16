@@ -1,8 +1,8 @@
-# moonsdk.model.SellQuote
+# openapi.model.SellQuote
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

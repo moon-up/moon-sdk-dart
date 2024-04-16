@@ -1,11 +1,11 @@
-# moonsdk.api.UniSwapApi
+# openapi.api.UniSwapApi
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,13 +16,13 @@ Method | HTTP request | Description
 
 
 # **addLiquidity**
-> TransactionAPIResponse addLiquidity(authorization, name, uniswapInput)
+> AccountControllerResponse addLiquidity(authorization, name, uniswapInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,7 +32,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getUniSwapApi();
+final api = Openapi().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -69,13 +69,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **removeLiquidity**
-> TransactionAPIResponse removeLiquidity(authorization, name, uniswapInput)
+> AccountControllerResponse removeLiquidity(authorization, name, uniswapInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -85,7 +85,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getUniSwapApi();
+final api = Openapi().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -122,13 +122,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **swapExactETHForTokens**
-> TransactionAPIResponse swapExactETHForTokens(authorization, name, uniswapInput)
+> AccountControllerResponse swapExactETHForTokens(authorization, name, uniswapInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -138,7 +138,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getUniSwapApi();
+final api = Openapi().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -175,13 +175,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **swapExactTokensForTokens**
-> TransactionAPIResponse swapExactTokensForTokens(authorization, name, uniswapInput)
+> AccountControllerResponse swapExactTokensForTokens(authorization, name, uniswapInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -191,7 +191,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getUniSwapApi();
+final api = Openapi().getUniSwapApi();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final UniswapInput uniswapInput = ; // UniswapInput | 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 

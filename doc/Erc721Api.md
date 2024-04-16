@@ -1,11 +1,11 @@
-# moonsdk.api.Erc721Api
+# openapi.api.Erc721Api
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 
 
 # **approve**
-> TransactionAPIResponse approve(authorization, name, erc721Request)
+> AccountControllerResponse approve(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -40,7 +40,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -77,13 +77,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **balanceOf**
-> TransactionAPIResponse balanceOf(authorization, name, erc721Request)
+> AccountControllerResponse balanceOf(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -93,7 +93,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -130,13 +130,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getApproved**
-> TransactionAPIResponse getApproved(authorization, name, erc721Request)
+> AccountControllerResponse getApproved(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -146,7 +146,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -183,13 +183,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **isApprovedForAll**
-> TransactionAPIResponse isApprovedForAll(authorization, name, erc721Request)
+> AccountControllerResponse isApprovedForAll(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -199,7 +199,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -236,13 +236,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **name**
-> TransactionAPIResponse name(authorization, name, erc721Request)
+> AccountControllerResponse name(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -252,7 +252,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -289,13 +289,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ownerOf**
-> TransactionAPIResponse ownerOf(authorization, name, erc721Request)
+> AccountControllerResponse ownerOf(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -305,7 +305,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -342,13 +342,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **safeTransferFrom**
-> TransactionAPIResponse safeTransferFrom(authorization, name, erc721Request)
+> AccountControllerResponse safeTransferFrom(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -358,7 +358,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -395,13 +395,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **setApprovalForAll**
-> TransactionAPIResponse setApprovalForAll(authorization, name, erc721Request)
+> AccountControllerResponse setApprovalForAll(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -411,7 +411,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -448,13 +448,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **symbol**
-> TransactionAPIResponse symbol(authorization, name, erc721Request)
+> AccountControllerResponse symbol(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -464,7 +464,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -501,13 +501,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tokenUri**
-> TransactionAPIResponse tokenUri(authorization, name, erc721Request)
+> AccountControllerResponse tokenUri(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -517,7 +517,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -554,13 +554,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transfer**
-> TransactionAPIResponse transfer(authorization, name, erc721Request)
+> AccountControllerResponse transfer(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -570,7 +570,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -607,13 +607,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transferFrom**
-> TransactionAPIResponse transferFrom(authorization, name, erc721Request)
+> AccountControllerResponse transferFrom(authorization, name, erc721Request)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -623,7 +623,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getErc721Api();
+final api = Openapi().getErc721Api();
 final String authorization = authorization_example; // String | 
 final String name = name_example; // String | 
 final Erc721Request erc721Request = ; // Erc721Request | 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionAPIResponse**](TransactionAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 

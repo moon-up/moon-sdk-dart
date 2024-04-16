@@ -1,11 +1,11 @@
-# moonsdk.api.CosmosApi
+# openapi.api.CosmosApi
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,13 +16,13 @@ Method | HTTP request | Description
 
 
 # **createCosmosAccount**
-> AccountAPIResponse createCosmosAccount(authorization, cosmosInput)
+> AccountControllerResponse createCosmosAccount(authorization, cosmosInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,7 +32,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getCosmosApi();
+final api = Openapi().getCosmosApi();
 final String authorization = authorization_example; // String | 
 final CosmosInput cosmosInput = ; // CosmosInput | 
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -67,13 +67,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getCosmosAccount**
-> AccountAPIResponse getCosmosAccount(authorization, accountName)
+> AccountControllerResponse getCosmosAccount(authorization, accountName)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -83,7 +83,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getCosmosApi();
+final api = Openapi().getCosmosApi();
 final String authorization = authorization_example; // String | 
 final String accountName = accountName_example; // String | 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -118,13 +118,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listCosmosAccounts**
-> AccountAPIResponse listCosmosAccounts(authorization)
+> AccountControllerResponse listCosmosAccounts(authorization)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -134,7 +134,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getCosmosApi();
+final api = Openapi().getCosmosApi();
 final String authorization = authorization_example; // String | 
 
 try {
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountAPIResponse**](AccountAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 
@@ -167,13 +167,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **signCosmosTransaction**
-> CosmosAPIResponse signCosmosTransaction(authorization, accountName, cosmosTransactionInput)
+> AccountControllerResponse signCosmosTransaction(authorization, accountName, cosmosTransactionInput)
 
 
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 // TODO Configure API key authorization: ApiKeyAuth
 //defaultApiClient.getAuthentication<ApiKeyAuth>('ApiKeyAuth').apiKey = 'YOUR_API_KEY';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -183,7 +183,7 @@ import 'package:moonsdk/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('BearerAuth').apiKeyPrefix = 'Bearer';
 
-final api = Moonsdk().getCosmosApi();
+final api = Openapi().getCosmosApi();
 final String authorization = authorization_example; // String | 
 final String accountName = accountName_example; // String | 
 final CosmosTransactionInput cosmosTransactionInput = ; // CosmosTransactionInput | 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CosmosAPIResponse**](CosmosAPIResponse.md)
+[**AccountControllerResponse**](AccountControllerResponse.md)
 
 ### Authorization
 

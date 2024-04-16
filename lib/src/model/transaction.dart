@@ -4,9 +4,9 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:moonsdk/src/model/transaction_data.dart';
-import 'package:moonsdk/src/model/transaction_request.dart';
-import 'package:moonsdk/src/model/tx.dart';
+import 'package:openapi/src/model/transaction_data.dart';
+import 'package:openapi/src/model/tx.dart';
+import 'package:openapi/src/model/transaction_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

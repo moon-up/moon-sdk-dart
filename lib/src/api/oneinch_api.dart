@@ -8,8 +8,8 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_value/json_object.dart';
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/get_swap_dto.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/get_swap_dto.dart';
 
 class OneinchApi {
 

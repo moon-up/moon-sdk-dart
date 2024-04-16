@@ -9,11 +9,11 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/create_payment_intent_input.dart';
-import 'package:moonsdk/src/model/i_webhook.dart';
-import 'package:moonsdk/src/model/payment_intent_response.dart';
-import 'package:moonsdk/src/model/tatum_transaction_event.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/create_payment_intent_input.dart';
+import 'package:openapi/src/model/i_webhook.dart';
+import 'package:openapi/src/model/payment_intent_response.dart';
+import 'package:openapi/src/model/tatum_transaction_event.dart';
 
 class PaymentApi {
 

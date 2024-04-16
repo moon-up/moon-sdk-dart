@@ -1,8 +1,8 @@
-# moonsdk.model.Erc20Response
+# openapi.model.Erc20Response
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

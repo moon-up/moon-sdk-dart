@@ -1,8 +1,8 @@
-# moonsdk.model.EosInput
+# openapi.model.EosInput
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

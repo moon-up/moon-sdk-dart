@@ -1,11 +1,11 @@
-# moonsdk.api.DefaultApi
+# openapi.api.DefaultApi
 
 ## Load the API package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
+All URIs are relative to *https://vault-api.usemoon.ai*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 
-final api = Moonsdk().getDefaultApi();
+final api = Openapi().getDefaultApi();
 
 try {
     final response = api.getMessage();

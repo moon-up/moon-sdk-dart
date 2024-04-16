@@ -7,11 +7,10 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_api_response.dart';
-import 'package:moonsdk/src/model/eos_api_response.dart';
-import 'package:moonsdk/src/model/eos_input.dart';
-import 'package:moonsdk/src/model/eos_transaction_input.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/account_controller_response.dart';
+import 'package:openapi/src/model/eos_input.dart';
+import 'package:openapi/src/model/eos_transaction_input.dart';
 
 class EosApi {
 
@@ -34,9 +33,9 @@ class EosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> createEosAccount({ 
+  Future<Response<AccountControllerResponse>> createEosAccount({ 
     required String authorization,
     required EosInput eosInput,
     CancelToken? cancelToken,
@@ -100,14 +99,14 @@ class EosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -119,7 +118,7 @@ class EosApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -144,9 +143,9 @@ class EosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> getEosAccount({ 
+  Future<Response<AccountControllerResponse>> getEosAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -190,14 +189,14 @@ class EosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -209,7 +208,7 @@ class EosApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -233,9 +232,9 @@ class EosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> listEosAccounts({ 
+  Future<Response<AccountControllerResponse>> listEosAccounts({ 
     required String authorization,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -278,14 +277,14 @@ class EosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -297,7 +296,7 @@ class EosApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -323,9 +322,9 @@ class EosApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [EosAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<EosAPIResponse>> signEosTransaction({ 
+  Future<Response<AccountControllerResponse>> signEosTransaction({ 
     required String authorization,
     required String accountName,
     required EosTransactionInput eosTransactionInput,
@@ -390,14 +389,14 @@ class EosApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    EosAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(EosAPIResponse),
-      ) as EosAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -409,7 +408,7 @@ class EosApi {
       );
     }
 
-    return Response<EosAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

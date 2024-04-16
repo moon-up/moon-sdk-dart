@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:moonsdk/src/model/account_data.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,11 +12,15 @@ part 'account_response.g.dart';
 /// AccountResponse
 ///
 /// Properties:
-/// * [data] 
+/// * [keys] 
+/// * [address] 
 @BuiltValue()
 abstract class AccountResponse implements Built<AccountResponse, AccountResponseBuilder> {
-  @BuiltValueField(wireName: r'data')
-  AccountData get data;
+  @BuiltValueField(wireName: r'keys')
+  BuiltList<String>? get keys;
+
+  @BuiltValueField(wireName: r'address')
+  String? get address;
 
   AccountResponse._();
 
@@ -41,11 +45,20 @@ class _$AccountResponseSerializer implements PrimitiveSerializer<AccountResponse
     AccountResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'data';
-    yield serializers.serialize(
-      object.data,
-      specifiedType: const FullType(AccountData),
-    );
+    if (object.keys != null) {
+      yield r'keys';
+      yield serializers.serialize(
+        object.keys,
+        specifiedType: const FullType(BuiltList, [FullType(String)]),
+      );
+    }
+    if (object.address != null) {
+      yield r'address';
+      yield serializers.serialize(
+        object.address,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -69,12 +82,19 @@ class _$AccountResponseSerializer implements PrimitiveSerializer<AccountResponse
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'data':
+        case r'keys':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(AccountData),
-          ) as AccountData;
-          result.data.replace(valueDes);
+            specifiedType: const FullType(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>;
+          result.keys.replace(valueDes);
+          break;
+        case r'address':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.address = valueDes;
           break;
         default:
           unhandled.add(key);

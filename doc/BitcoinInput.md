@@ -1,8 +1,8 @@
-# moonsdk.model.BitcoinInput
+# openapi.model.BitcoinInput
 
 ## Load the model package
 ```dart
-import 'package:moonsdk/api.dart';
+import 'package:openapi/api.dart';
 ```
 
 ## Properties

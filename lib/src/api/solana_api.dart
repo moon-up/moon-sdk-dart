@@ -7,11 +7,10 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:moonsdk/src/api_util.dart';
-import 'package:moonsdk/src/model/account_api_response.dart';
-import 'package:moonsdk/src/model/solana_api_response.dart';
-import 'package:moonsdk/src/model/solana_input.dart';
-import 'package:moonsdk/src/model/solana_transaction_input.dart';
+import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/account_controller_response.dart';
+import 'package:openapi/src/model/solana_input.dart';
+import 'package:openapi/src/model/solana_transaction_input.dart';
 
 class SolanaApi {
 
@@ -34,9 +33,9 @@ class SolanaApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> createSolanaAccount({ 
+  Future<Response<AccountControllerResponse>> createSolanaAccount({ 
     required String authorization,
     required SolanaInput solanaInput,
     CancelToken? cancelToken,
@@ -100,14 +99,14 @@ class SolanaApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -119,7 +118,7 @@ class SolanaApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -144,9 +143,9 @@ class SolanaApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> getSolanaAccount({ 
+  Future<Response<AccountControllerResponse>> getSolanaAccount({ 
     required String authorization,
     required String accountName,
     CancelToken? cancelToken,
@@ -190,14 +189,14 @@ class SolanaApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -209,7 +208,7 @@ class SolanaApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -233,9 +232,9 @@ class SolanaApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [AccountAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AccountAPIResponse>> listSolanaAccounts({ 
+  Future<Response<AccountControllerResponse>> listSolanaAccounts({ 
     required String authorization,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -278,14 +277,14 @@ class SolanaApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AccountAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(AccountAPIResponse),
-      ) as AccountAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -297,7 +296,7 @@ class SolanaApi {
       );
     }
 
-    return Response<AccountAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -323,9 +322,9 @@ class SolanaApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [SolanaAPIResponse] as data
+  /// Returns a [Future] containing a [Response] with a [AccountControllerResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<SolanaAPIResponse>> signSolanaTransaction({ 
+  Future<Response<AccountControllerResponse>> signSolanaTransaction({ 
     required String authorization,
     required String accountName,
     required SolanaTransactionInput solanaTransactionInput,
@@ -390,14 +389,14 @@ class SolanaApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    SolanaAPIResponse? _responseData;
+    AccountControllerResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(SolanaAPIResponse),
-      ) as SolanaAPIResponse;
+        specifiedType: const FullType(AccountControllerResponse),
+      ) as AccountControllerResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -409,7 +408,7 @@ class SolanaApi {
       );
     }
 
-    return Response<SolanaAPIResponse>(
+    return Response<AccountControllerResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

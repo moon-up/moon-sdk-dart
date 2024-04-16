@@ -3,11 +3,11 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:moonsdk/src/model/input_body.dart';
-import 'package:moonsdk/src/model/transaction_response.dart';
-import 'package:moonsdk/src/model/transaction_data.dart';
-import 'package:moonsdk/src/model/transaction.dart';
-import 'package:moonsdk/src/model/transaction_response_tx.dart';
+import 'package:openapi/src/model/transaction_data.dart';
+import 'package:openapi/src/model/transaction_response_tx.dart';
+import 'package:openapi/src/model/transaction.dart';
+import 'package:openapi/src/model/input_body.dart';
+import 'package:openapi/src/model/transaction_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
