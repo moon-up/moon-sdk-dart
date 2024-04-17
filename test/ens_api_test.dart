@@ -7,7 +7,7 @@ void main() {
   final instance = Moonsdk().getENSApi();
 
   group(ENSApi, () {
-    //Future<AccountControllerResponse> resolve(String authorization, EnsResolveInput ensResolveInput) async
+    //Future<EnsResolveAPIResponse> resolve(String authorization, EnsResolveInput ensResolveInput) async
     test('test resolve', () async {
       // TODO
     });

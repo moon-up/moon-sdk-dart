@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getLitecoinApi();
 
   group(LitecoinApi, () {
-    //Future<AccountControllerResponse> createLitecoinAccount(String authorization, LitecoinInput litecoinInput) async
+    //Future<AccountAPIResponse> createLitecoinAccount(String authorization, LitecoinInput litecoinInput) async
     test('test createLitecoinAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> getLitecoinAccount(String authorization, String accountName) async
+    //Future<AccountAPIResponse> getLitecoinAccount(String authorization, String accountName) async
     test('test getLitecoinAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> listLitecoinAccounts(String authorization) async
+    //Future<AccountAPIResponse> listLitecoinAccounts(String authorization) async
     test('test listLitecoinAccounts', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> signLitecoinTransaction(String authorization, String accountName, LitecoinTransactionInput litecoinTransactionInput) async
+    //Future<LitecoinAPIResponse> signLitecoinTransaction(String authorization, String accountName, LitecoinTransactionInput litecoinTransactionInput) async
     test('test signLitecoinTransaction', () async {
       // TODO
     });

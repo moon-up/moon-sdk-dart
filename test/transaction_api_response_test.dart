@@ -17,6 +17,26 @@ void main() {
       // TODO
     });
 
+    // InputBody body
+    test('to test the property `body`', () async {
+      // TODO
+    });
+
+    // String address
+    test('to test the property `address`', () async {
+      // TODO
+    });
+
+    // JsonObject transactionHash
+    test('to test the property `transactionHash`', () async {
+      // TODO
+    });
+
+    // JsonObject signedTx
+    test('to test the property `signedTx`', () async {
+      // TODO
+    });
+
     // Transaction data
     test('to test the property `data`', () async {
       // TODO

@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getEosApi();
 
   group(EosApi, () {
-    //Future<AccountControllerResponse> createEosAccount(String authorization, EosInput eosInput) async
+    //Future<AccountAPIResponse> createEosAccount(String authorization, EosInput eosInput) async
     test('test createEosAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> getEosAccount(String authorization, String accountName) async
+    //Future<AccountAPIResponse> getEosAccount(String authorization, String accountName) async
     test('test getEosAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> listEosAccounts(String authorization) async
+    //Future<AccountAPIResponse> listEosAccounts(String authorization) async
     test('test listEosAccounts', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> signEosTransaction(String authorization, String accountName, EosTransactionInput eosTransactionInput) async
+    //Future<EosAPIResponse> signEosTransaction(String authorization, String accountName, EosTransactionInput eosTransactionInput) async
     test('test signEosTransaction', () async {
       // TODO
     });

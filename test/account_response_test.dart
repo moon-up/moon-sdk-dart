@@ -7,13 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(AccountResponse, () {
-    // BuiltList<String> keys
-    test('to test the property `keys`', () async {
-      // TODO
-    });
-
-    // String address
-    test('to test the property `address`', () async {
+    // AccountData data
+    test('to test the property `data`', () async {
       // TODO
     });
 

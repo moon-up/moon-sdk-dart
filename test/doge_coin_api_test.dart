@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getDogeCoinApi();
 
   group(DogeCoinApi, () {
-    //Future<AccountControllerResponse> createDogeCoinAccount(String authorization, DogeCoinInput dogeCoinInput) async
+    //Future<AccountAPIResponse> createDogeCoinAccount(String authorization, DogeCoinInput dogeCoinInput) async
     test('test createDogeCoinAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> getDogeCoinAccount(String authorization, String accountName) async
+    //Future<AccountAPIResponse> getDogeCoinAccount(String authorization, String accountName) async
     test('test getDogeCoinAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> listDogeCoinAccounts(String authorization) async
+    //Future<AccountAPIResponse> listDogeCoinAccounts(String authorization) async
     test('test listDogeCoinAccounts', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> signDogeCoinTransaction(String authorization, String accountName, DogeCoinTransactionInput dogeCoinTransactionInput) async
+    //Future<DogeCoinAPIResponse> signDogeCoinTransaction(String authorization, String accountName, DogeCoinTransactionInput dogeCoinTransactionInput) async
     test('test signDogeCoinTransaction', () async {
       // TODO
     });

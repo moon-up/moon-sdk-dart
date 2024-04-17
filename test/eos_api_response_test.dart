@@ -17,6 +17,16 @@ void main() {
       // TODO
     });
 
+    // InputBody body
+    test('to test the property `body`', () async {
+      // TODO
+    });
+
+    // String address
+    test('to test the property `address`', () async {
+      // TODO
+    });
+
     // EosTransactionOutput data
     test('to test the property `data`', () async {
       // TODO

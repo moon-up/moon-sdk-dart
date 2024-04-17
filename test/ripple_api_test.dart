@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getRippleApi();
 
   group(RippleApi, () {
-    //Future<AccountControllerResponse> createRippleAccount(String authorization, RippleInput rippleInput) async
+    //Future<AccountAPIResponse> createRippleAccount(String authorization, RippleInput rippleInput) async
     test('test createRippleAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> getRippleAccount(String authorization, String accountName) async
+    //Future<AccountAPIResponse> getRippleAccount(String authorization, String accountName) async
     test('test getRippleAccount', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> listRippleAccounts(String authorization) async
+    //Future<AccountAPIResponse> listRippleAccounts(String authorization) async
     test('test listRippleAccounts', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> signRippleTransaction(String authorization, String accountName, RippleTransactionInput rippleTransactionInput) async
+    //Future<RippleAPIResponse> signRippleTransaction(String authorization, String accountName, RippleTransactionInput rippleTransactionInput) async
     test('test signRippleTransaction', () async {
       // TODO
     });

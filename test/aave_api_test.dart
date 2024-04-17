@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getAaveApi();
 
   group(AaveApi, () {
-    //Future<AccountControllerResponse> borrow(String authorization, String name, AaveInput aaveInput) async
+    //Future<TransactionAPIResponse> borrow(String authorization, String name, AaveInput aaveInput) async
     test('test borrow', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> lend(String authorization, String name, AaveInput aaveInput) async
+    //Future<TransactionAPIResponse> lend(String authorization, String name, AaveInput aaveInput) async
     test('test lend', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> repay(String authorization, String name, AaveInput aaveInput) async
+    //Future<TransactionAPIResponse> repay(String authorization, String name, AaveInput aaveInput) async
     test('test repay', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> userReserveData(String authorization, String name, AaveInput aaveInput) async
+    //Future<AaveReservesAPIResponse> userReserveData(String authorization, String name, AaveInput aaveInput) async
     test('test userReserveData', () async {
       // TODO
     });

@@ -7,22 +7,22 @@ void main() {
   final instance = Moonsdk().getYearnApi();
 
   group(YearnApi, () {
-    //Future<AccountControllerResponse> addLiquidity(String authorization, String name, InputBody inputBody) async
+    //Future<TransactionAPIResponse> addLiquidity(String authorization, String name, InputBody inputBody) async
     test('test addLiquidity', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> addLiquidityWeth(String authorization, String name, InputBody inputBody) async
+    //Future<TransactionAPIResponse> addLiquidityWeth(String authorization, String name, InputBody inputBody) async
     test('test addLiquidityWeth', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> removeLiquidity(String authorization, String name, InputBody inputBody) async
+    //Future<TransactionAPIResponse> removeLiquidity(String authorization, String name, InputBody inputBody) async
     test('test removeLiquidity', () async {
       // TODO
     });
 
-    //Future<AccountControllerResponse> removeLiquidityWeth(String authorization, String name, InputBody inputBody) async
+    //Future<TransactionAPIResponse> removeLiquidityWeth(String authorization, String name, InputBody inputBody) async
     test('test removeLiquidityWeth', () async {
       // TODO
     });
