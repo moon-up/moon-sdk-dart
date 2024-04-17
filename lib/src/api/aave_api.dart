@@ -7,10 +7,10 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/aave_input.dart';
-import 'package:openapi/src/model/aave_reserves_api_response.dart';
-import 'package:openapi/src/model/transaction_api_response.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/aave_input.dart';
+import 'package:moonsdk/src/model/aave_reserves_api_response.dart';
+import 'package:moonsdk/src/model/transaction_api_response.dart';
 
 class AaveApi {
 

@@ -9,15 +9,15 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/get_supported_on_ramps_response.dart';
-import 'package:openapi/src/model/quote.dart';
-import 'package:openapi/src/model/sell_quote.dart';
-import 'package:openapi/src/model/supported_asset_response.dart';
-import 'package:openapi/src/model/supported_currencies_response.dart';
-import 'package:openapi/src/model/supported_default_response.dart';
-import 'package:openapi/src/model/supported_payment_types_currency_response.dart';
-import 'package:openapi/src/model/transaction_input.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/get_supported_on_ramps_response.dart';
+import 'package:moonsdk/src/model/quote.dart';
+import 'package:moonsdk/src/model/sell_quote.dart';
+import 'package:moonsdk/src/model/supported_asset_response.dart';
+import 'package:moonsdk/src/model/supported_currencies_response.dart';
+import 'package:moonsdk/src/model/supported_default_response.dart';
+import 'package:moonsdk/src/model/supported_payment_types_currency_response.dart';
+import 'package:moonsdk/src/model/transaction_input.dart';
 
 class OnramperApi {
 

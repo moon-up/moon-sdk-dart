@@ -121,7 +121,7 @@ doc/Tx.md
 doc/UniSwapApi.md
 doc/UniswapInput.md
 doc/YearnApi.md
-lib/openapi.dart
+lib/moonsdk.dart
 lib/src/api.dart
 lib/src/api/aave_api.dart
 lib/src/api/accounts_api.dart

@@ -21,7 +21,6 @@ export 'package:moonsdk/src/api/ens_api.dart';
 export 'package:moonsdk/src/api/erc1155_api.dart';
 export 'package:moonsdk/src/api/eos_api.dart';
 export 'package:moonsdk/src/api/erc20_api.dart';
-export 'package:moonsdk/src/api/erc4337_api.dart';
 export 'package:moonsdk/src/api/erc721_api.dart';
 export 'package:moonsdk/src/api/litecoin_api.dart';
 export 'package:moonsdk/src/api/oneinch_api.dart';

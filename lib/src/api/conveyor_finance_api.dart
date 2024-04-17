@@ -7,9 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/conveyor_finance_controller_response.dart';
-import 'package:openapi/src/model/token_swap_params.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/conveyor_finance_controller_response.dart';
+import 'package:moonsdk/src/model/token_swap_params.dart';
 
 class ConveyorFinanceApi {
 

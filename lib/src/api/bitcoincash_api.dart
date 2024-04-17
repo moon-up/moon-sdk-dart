@@ -7,11 +7,11 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/account_api_response.dart';
-import 'package:openapi/src/model/bitcoin_cash_api_response.dart';
-import 'package:openapi/src/model/bitcoin_cash_input.dart';
-import 'package:openapi/src/model/bitcoin_cash_transaction_input.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/account_api_response.dart';
+import 'package:moonsdk/src/model/bitcoin_cash_api_response.dart';
+import 'package:moonsdk/src/model/bitcoin_cash_input.dart';
+import 'package:moonsdk/src/model/bitcoin_cash_transaction_input.dart';
 
 class BitcoincashApi {
 

@@ -1,8 +1,8 @@
-# openapi.model.SupportedPaymentTypesCurrencyResponse
+# moonsdk.model.SupportedPaymentTypesCurrencyResponse
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:moonsdk/api.dart';
 ```
 
 ## Properties

@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/bitcoin_cash_transaction_output.dart';
-import 'package:openapi/src/model/input_body.dart';
+import 'package:moonsdk/src/model/input_body.dart';
+import 'package:moonsdk/src/model/bitcoin_cash_transaction_output.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

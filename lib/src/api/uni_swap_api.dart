@@ -7,9 +7,9 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/transaction_api_response.dart';
-import 'package:openapi/src/model/uniswap_input.dart';
+import 'package:moonsdk/src/api_util.dart';
+import 'package:moonsdk/src/model/transaction_api_response.dart';
+import 'package:moonsdk/src/model/uniswap_input.dart';
 
 class UniSwapApi {
 
