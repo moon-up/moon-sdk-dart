@@ -27,7 +27,7 @@ If this Dart package is published to Github, please include the following in pub
 dependencies:
   moonsdk:
     git:
-      url: https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+      url:https://github.com/moon-up/moon-sdk-dart.git
       #ref: main
 ```
 
